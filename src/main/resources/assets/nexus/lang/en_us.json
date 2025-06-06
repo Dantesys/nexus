@@ -1,0 +1,9 @@
+{
+  "item.nexus.gema_nexus_vazia": "Crystal Nexus (Empty)",
+  "item.nexus.gema_nexus_solar": "Crystal Nexus (Solar)",
+  "item.nexus.gema_nexus_lunar": "Crystal Nexus (Lunar)",
+  "item.nexus.gema_nexus_nether": "Crystal Nexus (Nether)",
+  "item.nexus.gema_nexus_end": "Crystal Nexus (Ender)",
+  "block.nexus.carregador_nexus": "Nexus Charger",
+  "itemGroup.nexustab": "Nexus"
+}

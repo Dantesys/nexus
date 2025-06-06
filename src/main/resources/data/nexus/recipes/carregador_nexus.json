@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "fvf",
+    "d#d",
+    "fff"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:air"
+    },
+    "f": {
+      "item": "minecraft:iron_ingot"
+    },
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "v": {
+      "item": "minecraft:glass"
+    }
+  },
+  "result": {
+    "item": "nexus:carregador_nexus"
+  }
+}
