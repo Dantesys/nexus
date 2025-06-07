@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "nexus:block/coletor_nexus"}
+  }
+}

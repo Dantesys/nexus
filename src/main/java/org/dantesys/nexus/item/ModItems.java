@@ -16,6 +16,7 @@ public class ModItems {
     public static final RegistryObject<Item> GEMA_NEXUS_LUNAR = ITEMS.register("gema_nexus_lunar", () -> new Item(new Item.Properties().tab(ModCreativeTab.NEXUS_TAB)));
     public static final RegistryObject<Item> GEMA_NEXUS_NETHER = ITEMS.register("gema_nexus_nether", () -> new Item(new Item.Properties().tab(ModCreativeTab.NEXUS_TAB)));
     public static final RegistryObject<Item> GEMA_NEXUS_END = ITEMS.register("gema_nexus_end", () -> new Item(new Item.Properties().tab(ModCreativeTab.NEXUS_TAB)));
+    public static final RegistryObject<Item> NEXUS_ORB = ITEMS.register("nexus_orb", () -> new Orb(new Item.Properties().stacksTo(1).tab(ModCreativeTab.NEXUS_TAB)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

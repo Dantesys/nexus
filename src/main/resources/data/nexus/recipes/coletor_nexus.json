@@ -1,25 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "fvf",
-    "dnd",
+    "fff",
+    "nen",
     "fff"
   ],
   "key": {
     "f": {
       "item": "minecraft:iron_ingot"
     },
-    "d": {
-      "item": "minecraft:diamond"
+    "e": {
+      "item": "minecraft:emerald"
     },
     "n": {
       "item": "nexus:nexus_orb"
-    },
-    "v": {
-      "item": "minecraft:glass"
     }
   },
   "result": {
-    "item": "nexus:carregador_nexus"
+    "item": "nexus:coletor_nexus"
   }
 }

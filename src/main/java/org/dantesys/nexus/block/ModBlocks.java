@@ -4,6 +4,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,7 +20,12 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Nexus.MOD_ID);
 
-    public static final RegistryObject<Block> CARREGADOR = registerBlock("carregador_nexus",() -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.NEXUS_TAB);
+    public static final RegistryObject<Block> ORB_ORE = registerBlock("nexus_orb_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE)), ModCreativeTab.NEXUS_TAB);
+    public static final RegistryObject<Block> CARREGADOR = registerBlock("carregador_nexus",
+            () -> new CarregadorNexus(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion().strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.NEXUS_TAB);
+    public static final RegistryObject<Block> COLETOR = registerBlock("coletor_nexus",
+            () -> new ColetorNexus(BlockBehaviour.Properties.of(Material.HEAVY_METAL).noOcclusion().strength(10f).requiresCorrectToolForDrops()), ModCreativeTab.NEXUS_TAB);
 
     private  static <T extends Block> RegistryObject<T> registerBlock(String nome, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(nome,block);

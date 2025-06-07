@@ -4,6 +4,9 @@
   "item.nexus.gema_nexus_lunar": "Crystal Nexus (Lunar)",
   "item.nexus.gema_nexus_nether": "Crystal Nexus (Nether)",
   "item.nexus.gema_nexus_end": "Crystal Nexus (Ender)",
+  "item.nexus.nexus_orb": "Nexus Orb",
   "block.nexus.carregador_nexus": "Nexus Charger",
+  "block.nexus.coletor_nexus": "Nexus Collector",
+  "block.nexus.nexus_orb_ore": "Nexus Orb Ore",
   "itemGroup.nexustab": "Nexus"
 }

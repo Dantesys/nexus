@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "nexus:block/nexus_orb_ore"
+  }
+}

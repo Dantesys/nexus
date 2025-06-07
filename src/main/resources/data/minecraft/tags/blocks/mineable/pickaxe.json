@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "nexus:nexus_orb_ore",
+    "nexus:carregador_nexus",
+    "nexus:coletor_nexus"
+  ]
+}

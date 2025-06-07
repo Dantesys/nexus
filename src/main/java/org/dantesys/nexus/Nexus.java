@@ -1,6 +1,9 @@
 package org.dantesys.nexus;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +18,10 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.dantesys.nexus.block.ModBlocks;
+import org.dantesys.nexus.block.entity.ModBlockEntities;
 import org.dantesys.nexus.item.ModItems;
+import org.dantesys.nexus.screen.ColetorScreen;
+import org.dantesys.nexus.screen.ModMenuTypes;
 import org.slf4j.Logger;
 
 import java.util.stream.Collectors;
@@ -33,7 +39,10 @@ public class Nexus {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
         // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
@@ -48,7 +57,12 @@ public class Nexus {
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
-
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARREGADOR.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CARREGADOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.COLETOR.get(), RenderType.cutout());
+        MenuScreens.register(ModMenuTypes.COLETOR_MENU.get(), ColetorScreen::new);
+    }
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // Some example code to dispatch IMC to another mod
         InterModComms.sendTo("nexus", "helloworld", () -> {
