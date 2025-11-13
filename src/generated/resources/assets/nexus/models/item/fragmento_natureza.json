@@ -1,0 +1,6 @@
+{
+  "parent": "nexus:item/fragmento_base",
+  "textures": {
+    "0": "nexus:item/fragmento_natureza"
+  }
+}

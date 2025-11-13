@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rocha_fragmento": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:fragmento_rocha"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:esmeralda_rocha"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rocha_fragmento"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:esmeralda_rocha"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "nexus:item/esmeralda_base",
+  "textures": {
+    "0": "nexus:item/esmeralda_rocha"
+  }
+}

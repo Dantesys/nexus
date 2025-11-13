@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "F": {
+      "item": "nexus:fragmento_agua"
+    }
+  },
+  "pattern": [
+    " F ",
+    "FEF",
+    " F "
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:esmeralda_agua"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_natureza_fragmento": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:fragmento_natureza"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:esmeralda_natureza"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_natureza_fragmento"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:esmeralda_natureza"
+    ]
+  }
+}

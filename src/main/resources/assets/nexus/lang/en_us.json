@@ -1,5 +1,22 @@
 {
-  "itemGroup.nexus": "Example Mod Tab",
-  "block.nexus.example_block": "Example Block",
-  "item.nexus.example_item": "Example Item"
+  "item.nexus.fragmento_fogo": "Igneous Fragment",
+  "item.nexus.fragmento_agua": "Marine Fragment",
+  "item.nexus.fragmento_rocha": "Granitic Fragment",
+  "item.nexus.fragmento_natureza": "Verdant Fragment",
+  "item.nexus.fragmento_eletrico": "Static Fragment",
+  "item.nexus.fragmento_metal": "Metallic Fragment",
+  "item.nexus.fragmento_luz": "Light Fragment",
+  "item.nexus.fragmento_escuro": "Darkness Fragment",
+  "item.nexus.esmeralda_fogo": "Igneous Emerald",
+  "item.nexus.esmeralda_agua": "Marine Emerald",
+  "item.nexus.esmeralda_rocha": "Granitic Emerald",
+  "item.nexus.esmeralda_natureza": "Verdant Emerald",
+  "item.nexus.esmeralda_eletrico": "Static Emerald",
+  "item.nexus.esmeralda_metal": "Metallic Emerald",
+  "item.nexus.esmeralda_luz": "Light Emerald",
+  "item.nexus.esmeralda_escuro": "Dark Emerald",
+  "item.nexus.nucleo": "Elemental Core",
+  "block.nexus.infusor_elemental": "Elemental Infuser",
+  "container.nexus.infusor": "Elemental Infuser",
+  "itemGroup.nexus": "Nexus Elemental"
 }

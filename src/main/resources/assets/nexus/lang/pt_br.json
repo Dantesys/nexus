@@ -1,5 +1,22 @@
 {
-  "itemGroup.nexus": "Example Mod Tab",
-  "block.nexus.example_block": "Example Block",
-  "item.nexus.example_item": "Example Item"
+  "item.nexus.fragmento_fogo": "Fragmento Ígneo",
+  "item.nexus.fragmento_agua": "Fragmento Marinho",
+  "item.nexus.fragmento_rocha": "Fragmento Granítico",
+  "item.nexus.fragmento_natureza": "Fragmento Verdejante",
+  "item.nexus.fragmento_eletrico": "Fragmento Estático",
+  "item.nexus.fragmento_metal": "Fragmento Metálico",
+  "item.nexus.fragmento_luz": "Fragmento da Luz",
+  "item.nexus.fragmento_escuro": "Fragmento da Escuridão",
+  "item.nexus.esmeralda_fogo": "Esmeralda Ígnea",
+  "item.nexus.esmeralda_agua": "Esmeralda Marinha",
+  "item.nexus.esmeralda_rocha": "Esmeralda Granítica",
+  "item.nexus.esmeralda_natureza": "Esmeralda Verdejante",
+  "item.nexus.esmeralda_eletrico": "Esmeralda Estática",
+  "item.nexus.esmeralda_metal": "Esmeralda Metálica",
+  "item.nexus.esmeralda_luz": "Esmeralda da Luz",
+  "item.nexus.esmeralda_escuro": "Esmeralda da Escuridão",
+  "item.nexus.nucleo": "Núcleo Elemental",
+  "block.nexus.infusor_elemental": "Infusor Elemental",
+  "container.nexus.infusor": "Infusor Elemental",
+  "itemGroup.nexus": "Nexus Elemental"
 }
