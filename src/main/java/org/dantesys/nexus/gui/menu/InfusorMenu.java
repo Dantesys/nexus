@@ -8,6 +8,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.DataSlot;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.items.SlotItemHandler;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
 import org.dantesys.nexus.gui.NexusMenus;
 
@@ -53,12 +54,12 @@ public class InfusorMenu extends AbstractContainerMenu {
 
         // BE slots (0..4)
         // inputs 0..3 positioned on GUI (x,y chosen arbitrarily; ajuste conforme seu background)
-        addSlot(new Slot(be, 0, 44, 16));
-        addSlot(new Slot(be, 1, 117, 16));
-        addSlot(new Slot(be, 2, 44, 52));
-        addSlot(new Slot(be, 3, 117, 52));
+        addSlot(new SlotItemHandler(be.inventory, 0, 44, 16));
+        addSlot(new SlotItemHandler(be.inventory, 1, 117, 16));
+        addSlot(new SlotItemHandler(be.inventory, 2, 44, 52));
+        addSlot(new SlotItemHandler(be.inventory, 3, 117, 52));
         // output slot 4 (readonly typical) — override if you want special behavior
-        addSlot(new Slot(be, 4, 82, 34) {
+        addSlot(new SlotItemHandler(be.inventory, 4, 80, 34) {
             @Override
             public boolean mayPlace(ItemStack stack) { return false; }
         });

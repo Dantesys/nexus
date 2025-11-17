@@ -131,7 +131,7 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
         // conta frequência por Item (slots 0..3)
         java.util.Map<net.minecraft.world.item.Item, Integer> freq = new java.util.HashMap<>();
         for (int i = 0; i < 4; i++) {
-            net.minecraft.world.item.ItemStack s = this.items.get(i);
+            net.minecraft.world.item.ItemStack s = this.inventory.getStackInSlot(i);
             if (!s.isEmpty()) {
                 net.minecraft.world.item.Item it = s.getItem();
                 freq.put(it, freq.getOrDefault(it, 0) + 1);
@@ -166,7 +166,7 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
             applySuccess();
         } else {
             // falha: consome inputs (ajuste se quiser devolver parcialmente)
-            for (int i = 0; i < 4; i++) this.items.set(i, net.minecraft.world.item.ItemStack.EMPTY);
+            for (int i = 0; i < 4; i++) this.inventory.extractItem(i, 1,false).setCount(0);
             this.success = false;
         }
 
@@ -176,8 +176,8 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
 
     // helper de sucesso (usa seu item de núcleo registrado)
     private void applySuccess() {
-        for (int i = 0; i < 4; i++) this.items.set(i, net.minecraft.world.item.ItemStack.EMPTY);
-        this.items.set(4, new net.minecraft.world.item.ItemStack(org.dantesys.nexus.items.NexusItems.NUCLEO.get()));
+        for (int i = 0; i < 4; i++) this.inventory.extractItem(i, 1,false).setCount(0);
+        this.inventory.insertItem(4, new ItemStack(org.dantesys.nexus.items.NexusItems.NUCLEO.get()),false);
         this.success = true;
     }
     public static <T extends BlockEntity> void tick(Level level, BlockPos blockPos, BlockState blockState, T t) {

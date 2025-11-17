@@ -16,7 +16,7 @@
   "item.nexus.esmeralda_luz": "Light Emerald",
   "item.nexus.esmeralda_escuro": "Dark Emerald",
   "item.nexus.nucleo": "Elemental Core",
-  "block.nexus.infusor_elemental": "Elemental Infuser",
+  "block.nexus.infusor": "Elemental Infuser",
   "container.nexus.infusor": "Elemental Infuser",
   "itemGroup.nexus": "Nexus Elemental"
 }

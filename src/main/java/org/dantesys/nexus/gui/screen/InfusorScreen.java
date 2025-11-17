@@ -9,7 +9,7 @@ import org.dantesys.nexus.gui.menu.InfusorMenu;
 import org.jetbrains.annotations.NotNull;
 
 public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
-    private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/infusor.png");
+    private static final ResourceLocation BACKGROUND = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/infusor_gui.png");
     private final int guiWidth = 176;
     private final int guiHeight = 166;
 
@@ -41,7 +41,7 @@ public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
 
         // texto da chance
         int chancePercent = (int) Math.round(this.menu.getBlockEntity().getCurrentChance() * 100.0);
-        guiGraphics.drawString(this.font, chancePercent + "%", x + 8, y + 6, 0xFFFFFF, false);
+        guiGraphics.drawString(this.font, chancePercent + "%", x + 8, y + 15, 0xFFFFFF, false);
     }
 
 
@@ -57,11 +57,5 @@ public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
 
         // inventário do jogador
         guiGraphics.drawString(this.font, this.playerInventoryTitle, 8, this.imageHeight - 94, 4210752, false);
-
-        // chance atual (opcional)
-        int chancePercent = (int) Math.round(this.menu.getBlockEntity().getCurrentChance() * 100.0);
-        guiGraphics.drawString(this.font, "Chance: " + chancePercent + "%", 8, 20, 0xFFFFFF, false);
     }
-
-
 }

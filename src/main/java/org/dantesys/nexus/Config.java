@@ -23,10 +23,10 @@ public class Config {
             b.push("infusor");
             baseChance = b
                     .comment("Chance base de sucesso para o Infusor (0.0 - 1.0). Ex: 0.25 = 25%")
-                    .defineInRange("baseChance", 0.25d, 0.0d, 1.0d);
+                    .defineInRange("baseChance", 0.5d, 0.0d, 1.0d);
             perMatchIncrease = b
                     .comment("Aumento percentual por cada esmeralda adicional do mesmo elemento (0.0 - 1.0). Ex: 0.20 = +20% por cada duplicata")
-                    .defineInRange("perMatchIncrease", 0.20d, 0.0d, 1.0d);
+                    .defineInRange("perMatchIncrease", 0.10d, 0.0d, 1.0d);
             b.pop();
         }
     }

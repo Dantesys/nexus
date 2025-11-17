@@ -13,6 +13,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -89,6 +90,10 @@ public class Nexus
         @SubscribeEvent // on the mod event bus only on the physical client
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(INFUSOR_MENU.get(), InfusorScreen::new);
+        }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(NexusBlocks.INFUSOR_BE.get(), InfusorBlockEntityRenderer::new);
         }
     }
 }
