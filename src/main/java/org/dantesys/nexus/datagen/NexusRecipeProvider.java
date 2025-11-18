@@ -10,7 +10,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import org.dantesys.nexus.Nexus;
+import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.items.NexusItems;
+import org.dantesys.nexus.util.NexusTags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -30,6 +32,14 @@ public class NexusRecipeProvider extends RecipeProvider {
         createEsmeraldaRecipe(recipeOutput, NexusItems.ESMERALDA_METAL.get(), NexusItems.FRAGMENTO_METAL.get(), "metal");
         createEsmeraldaRecipe(recipeOutput, NexusItems.ESMERALDA_LUZ.get(), NexusItems.FRAGMENTO_LUZ.get(), "luz");
         createEsmeraldaRecipe(recipeOutput, NexusItems.ESMERALDA_ESCURO.get(), NexusItems.FRAGMENTO_ESCURO.get(), "escuro");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.INFUSOR.get())
+                .pattern("EEE").pattern("GOG").pattern("FOF")
+                .define('G',Items.GOLD_INGOT)
+                .define('F',Items.IRON_INGOT)
+                .define('O',Items.OBSIDIAN)
+                .define('E', NexusTags.Items.EMERALD_ELEMENTAL)
+                .unlockedBy("has_esmerald_elemental", has(NexusTags.Items.EMERALD_ELEMENTAL))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"infusor"));
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {

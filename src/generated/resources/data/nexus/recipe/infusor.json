@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "tag": "nexus:esmeralda_elemental"
+    },
+    "F": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "GOG",
+    "FOF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:infusor"
+  }
+}

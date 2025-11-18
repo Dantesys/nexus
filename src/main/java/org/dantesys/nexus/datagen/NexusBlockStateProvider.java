@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
 
 public class NexusBlockStateProvider extends BlockStateProvider {
@@ -14,9 +15,8 @@ public class NexusBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        ModelFile nexusModel = models().withExistingParent("infusor", this.mcLoc("nexus:block/infusor"));
+        ModelFile model = models().withExistingParent("infusor", this.mcLoc(Nexus.MODID+":block/infusor_nexus"));
         Block block = NexusBlocks.INFUSOR.get();
-        // Shorthand for calling #simpleBlock() (model file overload) and #simpleBlockItem.
-        simpleBlockItem(block, nexusModel);
+        simpleBlockWithItem(block,model);
     }
 }

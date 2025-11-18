@@ -14,20 +14,7 @@ public class Config {
     }
 
     public static class Common {
-        // chance base para o craft (0.0 - 1.0)
-        public final ModConfigSpec.DoubleValue baseChance;
-        // incremento por cada esmeralda adicional do mesmo tipo (0.0 - 1.0)
-        public final ModConfigSpec.DoubleValue perMatchIncrease;
-
         public Common(ModConfigSpec.Builder b) {
-            b.push("infusor");
-            baseChance = b
-                    .comment("Chance base de sucesso para o Infusor (0.0 - 1.0). Ex: 0.25 = 25%")
-                    .defineInRange("baseChance", 0.5d, 0.0d, 1.0d);
-            perMatchIncrease = b
-                    .comment("Aumento percentual por cada esmeralda adicional do mesmo elemento (0.0 - 1.0). Ex: 0.20 = +20% por cada duplicata")
-                    .defineInRange("perMatchIncrease", 0.10d, 0.0d, 1.0d);
-            b.pop();
         }
     }
 }

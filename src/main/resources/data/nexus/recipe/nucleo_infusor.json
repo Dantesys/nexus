@@ -1,0 +1,18 @@
+{
+  "type": "nexus:infusor",
+  "input_1": {
+    "tag": "nexus:esmeralda_elemental"
+  },
+  "input_2": {
+    "tag": "nexus:esmeralda_elemental"
+  },
+  "input_3": {
+    "tag": "nexus:esmeralda_elemental"
+  },
+  "input_4": {
+    "tag": "nexus:esmeralda_elemental"
+  },
+  "result": {
+    "id": "nexus:nucleo"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "values": [
+    "nexus:esmeralda_agua",
+    "nexus:esmeralda_eletrico",
+    "nexus:esmeralda_escuro",
+    "nexus:esmeralda_fogo",
+    "nexus:esmeralda_luz",
+    "nexus:esmeralda_metal",
+    "nexus:esmeralda_natureza",
+    "nexus:esmeralda_rocha"
+  ]
+}

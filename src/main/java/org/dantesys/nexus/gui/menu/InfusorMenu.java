@@ -37,19 +37,6 @@ public class InfusorMenu extends AbstractContainerMenu {
             }
         });
 
-        // DataSlot para chancePercent (0..100)
-        this.addDataSlot(new DataSlot() {
-            @Override
-            public int get() {
-                return (int) Math.round(blockEntity.getCurrentChance() * 100.0);
-            }
-            @Override
-            public void set(int value) {
-                // normalmente o cliente não deverá setar isso; apenas para segurança:
-                // converte de volta para o BE se fizer sentido (ou ignore)
-                // blockEntity.setSomeInternalPercent(value);
-            }
-        });
         this.access = ContainerLevelAccess.create(be.getLevel(), be.getBlockPos());
 
         // BE slots (0..4)
@@ -107,7 +94,7 @@ public class InfusorMenu extends AbstractContainerMenu {
     public ItemStack quickMoveStack(Player player, int index) {
         ItemStack result = ItemStack.EMPTY;
         Slot slot = this.slots.get(index);
-        if (slot != null && slot.hasItem()) {
+        if (slot.hasItem()) {
             ItemStack stack = slot.getItem();
             result = stack.copy();
             int containerSlots = 5;

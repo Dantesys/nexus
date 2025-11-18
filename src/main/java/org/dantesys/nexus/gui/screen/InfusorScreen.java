@@ -38,10 +38,6 @@ public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
         int max = this.menu.getBlockEntity() != null ? this.menu.getBlockEntity().getMaxProgress() : 100;
         int arrowWidth = getScaledProgress(progress, max, 24);
         guiGraphics.blit(BACKGROUND, x + 78, y + 34, 176, 0, arrowWidth, 16);
-
-        // texto da chance
-        int chancePercent = (int) Math.round(this.menu.getBlockEntity().getCurrentChance() * 100.0);
-        guiGraphics.drawString(this.font, chancePercent + "%", x + 8, y + 15, 0xFFFFFF, false);
     }
 
 
