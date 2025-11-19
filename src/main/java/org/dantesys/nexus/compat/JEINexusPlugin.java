@@ -43,7 +43,7 @@ public class JEINexusPlugin implements IModPlugin {
 
     @Override
     public void registerGuiHandlers(IGuiHandlerRegistration registration) {
-        registration.addRecipeClickArea(InfusorScreen.class, 74, 30, 22, 20,
+        registration.addRecipeClickArea(InfusorScreen.class, 74, 45, 22, 20,
                 InfusorRecipeCategory.INFUSOR_RECIPE_TYPE);
     }
 
