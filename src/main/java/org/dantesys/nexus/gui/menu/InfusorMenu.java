@@ -93,8 +93,8 @@ public class InfusorMenu extends AbstractContainerMenu {
         return this.blockEntity.getProgress()>0;
     }
     public int getLoading(){
-        int progress = this.blockEntity.getProgress();
-        int maxProgress = this.blockEntity.getMaxProgress();
+        int progress = this.blockEntity.getProgress()/2;
+        int maxProgress = this.blockEntity.getMaxProgress()/2;
         int arrowPixelSize = 27;
 
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;

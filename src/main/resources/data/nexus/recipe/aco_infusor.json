@@ -1,8 +1,8 @@
 {
   "type": "nexus:infusor",
   "ingredients": [
-    {"tag": "nexus:esmeralda_elemental"},
-    {"tag": "nexus:esmeralda_elemental"},
+    {"item": "minecraft:coal"},
+    {"item": "minecraft:iron_ingot"},
     {"item": "minecraft:coal"},
     {"item": "minecraft:iron_ingot"}
   ],

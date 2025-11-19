@@ -1,8 +1,8 @@
 {
   "type": "nexus:infusor",
   "ingredients": [
-    {"item": "nexus:nucleo"},
-    {"item": "nexus:nucleo"},
+    {"item": "minecraft:coal_block"},
+    {"item": "minecraft:iron_block"},
     {"item": "minecraft:coal_block"},
     {"item": "minecraft:iron_block"}
   ],

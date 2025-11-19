@@ -37,10 +37,10 @@ public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
     }
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(menu.getTextureFromSlot(0),x + 61, y + 15, 0, 0, menu.getLoading(), menu.getLoading(), 27, 27);
-            guiGraphics.blit(menu.getTextureFromSlot(1),x + 114, y + 15, 27, 0, -menu.getLoading(), menu.getLoading(), 27, 27);
-            guiGraphics.blit(menu.getTextureFromSlot(2),x + 61, y + 68, 0, 27, menu.getLoading(), -menu.getLoading(), 27, 27);
-            guiGraphics.blit(menu.getTextureFromSlot(3),x + 114, y + 68, 27, 27, -menu.getLoading(), -menu.getLoading(), 27, 27);
+            guiGraphics.blit(menu.getTextureFromSlot(0),x + 61, y + 15, 0, 0, menu.getLoading(), menu.getLoading(), 54, 54);
+            guiGraphics.blit(menu.getTextureFromSlot(1),x + 115-menu.getLoading(), y + 15, 54-menu.getLoading(), 0, menu.getLoading(), menu.getLoading(), 54, 54);
+            guiGraphics.blit(menu.getTextureFromSlot(2),x + 61, y + 69-menu.getLoading(), 0, 54-menu.getLoading(), menu.getLoading(), menu.getLoading(), 54, 54);
+            guiGraphics.blit(menu.getTextureFromSlot(3),x + 115-menu.getLoading(), y + 69-menu.getLoading(), 54-menu.getLoading(), 54-menu.getLoading(), menu.getLoading(), menu.getLoading(), 54, 54);
         }
     }
 

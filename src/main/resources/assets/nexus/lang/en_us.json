@@ -16,9 +16,9 @@
   "item.nexus.esmeralda_luz": "Light Emerald",
   "item.nexus.esmeralda_escuro": "Dark Emerald",
   "item.nexus.nucleo": "Elemental Core",
-  "item.nexus.aco": "Steel Ingot",
+  "item.nexus.aco": "Elemental Steel Ingot",
   "block.nexus.infusor": "Elemental Infuser",
-  "block.nexus.aco_block" : "Steel Block",
+  "block.nexus.aco_block" : "Elemental Steel Block",
   "container.nexus.infusor": "Elemental Infuser",
   "itemGroup.nexus": "Nexus Elemental"
 }
