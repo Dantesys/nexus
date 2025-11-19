@@ -29,8 +29,8 @@ public class InfusorBlockEntityRenderer implements BlockEntityRenderer<InfusorBl
         double time = (Minecraft.getInstance().level.getGameTime() + partialTicks)/10;
         double time2 = (Minecraft.getInstance().level.getGameTime() + partialTicks);
         for (int i = 0; i < 4; i++) {
-            double raio = 0.35;
-            double angle = time * 0.02 + i * Math.PI / 2.0;
+            double raio = 0.35-(be.getProgress()*(0.35/(be.getMaxProgress()-1)));
+            double angle = time2 * 0.02 + i * Math.PI / 2.0;
             double x = Math.cos(angle)*raio;
             double z = Math.sin(angle)*raio;
             int seed = (int) (be.getBlockPos().asLong());
@@ -38,7 +38,7 @@ public class InfusorBlockEntityRenderer implements BlockEntityRenderer<InfusorBl
             poseStack.translate(0.5f, 1.25f, 0.5f);
             poseStack.translate(x, 0, z); // y ajustável para altura do pedestal
             poseStack.scale(0.35f, 0.35f, 0.35f);
-            float bob = (float)Math.sin(time * 0.1 + i) * 0.05f; // sobe e desce
+            float bob = (float)Math.sin(time2 * 0.1 + i) * 0.05f; // sobe e desce
             poseStack.translate(x, bob, z);
             poseStack.mulPose(Axis.YP.rotationDegrees((float)(time2 * 4 + i * 90)));
             // desenha um item flutuando girando sobre o pedestal (se houver)

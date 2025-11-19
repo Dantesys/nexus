@@ -1,6 +1,7 @@
 package org.dantesys.nexus.gui.menu;
 
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -9,8 +10,11 @@ import net.minecraft.world.inventory.DataSlot;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.items.SlotItemHandler;
+import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
 import org.dantesys.nexus.gui.NexusMenus;
+import org.dantesys.nexus.items.NexusItems;
+import org.dantesys.nexus.util.NexusTags;
 
 import java.util.Objects;
 
@@ -84,6 +88,40 @@ public class InfusorMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         return stillValid(access, player, org.dantesys.nexus.blocks.NexusBlocks.INFUSOR.get());
+    }
+    public boolean isCrafting(){
+        return this.blockEntity.getProgress()>0;
+    }
+    public int getLoading(){
+        int progress = this.blockEntity.getProgress();
+        int maxProgress = this.blockEntity.getMaxProgress();
+        int arrowPixelSize = 27;
+
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
+    public ResourceLocation getTextureFromSlot(int slot){
+        ItemStack stack = this.getSlot(slot).getItem();
+        ResourceLocation rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_padrao.png");
+        if(stack.getTags().anyMatch(tag -> tag.equals(NexusTags.Items.EMERALD_ELEMENTAL))){
+            if(stack.is(NexusItems.ESMERALDA_AGUA.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_agua.png");
+            }else if(stack.is(NexusItems.ESMERALDA_ELETRICO.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_eletrico.png");
+            }else if(stack.is(NexusItems.ESMERALDA_ESCURO.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_escuro.png");
+            }else if(stack.is(NexusItems.ESMERALDA_FOGO.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_fogo.png");
+            }else if(stack.is(NexusItems.ESMERALDA_LUZ.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_luz.png");
+            }else if(stack.is(NexusItems.ESMERALDA_METAL.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_metal.png");
+            }else if(stack.is(NexusItems.ESMERALDA_NATUREZA.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_natureza.png");
+            }else if(stack.is(NexusItems.ESMERALDA_ROCHA.get())){
+                rs = ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"textures/gui/infusor/ld_rocha.png");
+            }
+        }
+        return rs;
     }
 
     // quick helper to transfer stack on shift-click (basic implementation)

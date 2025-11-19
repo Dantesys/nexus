@@ -50,7 +50,7 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
         this.progress=p;
     }
     public int getMaxProgress(){
-        return 100;
+        return 200;
     }
 
     @Override
@@ -83,17 +83,19 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
     public CompoundTag getUpdateTag(HolderLookup.Provider pRegistries) {
         return saveWithoutMetadata(pRegistries);
     }
+
     public <T extends BlockEntity> void tick(Level level, BlockPos blockPos, BlockState blockState) {
         if(hasRecipe()) {
             increaseCraftingProgress();
             setChanged(level, blockPos, blockState);
-
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
+                level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         } else {
             resetProgress();
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
         }
     }
     private void craftItem() {
@@ -114,6 +116,9 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
     }
     private void increaseCraftingProgress() {
         progress++;
+        if (this.level != null && !this.level.isClientSide) {
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+        }
     }
     private boolean hasRecipe() {
         Optional<RecipeHolder<InfusorRecipe>> recipe = getCurrentRecipe();

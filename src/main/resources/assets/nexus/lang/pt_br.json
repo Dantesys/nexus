@@ -16,7 +16,9 @@
   "item.nexus.esmeralda_luz": "Esmeralda da Luz",
   "item.nexus.esmeralda_escuro": "Esmeralda da Escuridão",
   "item.nexus.nucleo": "Núcleo Elemental",
+  "item.nexus.aco": "Lingote de Aço",
   "block.nexus.infusor": "Infusor Elemental",
+  "block.nexus.aco_block" : "Bloco de Aço",
   "container.nexus.infusor": "Infusor Elemental",
   "itemGroup.nexus": "Nexus Elemental"
 }

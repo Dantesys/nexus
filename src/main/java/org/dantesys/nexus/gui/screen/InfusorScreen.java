@@ -32,18 +32,16 @@ public class InfusorScreen extends AbstractContainerScreen<InfusorMenu> {
         int x = (this.width - this.imageWidth) / 2;
         int y = (this.height - this.imageHeight) / 2;
         guiGraphics.blit(BACKGROUND, x, y, 0, 0, this.imageWidth, this.imageHeight);
-
         // barra de progresso
-        int progress = this.menu.getBlockEntity().getProgress();
-        int max = this.menu.getBlockEntity() != null ? this.menu.getBlockEntity().getMaxProgress() : 100;
-        int arrowWidth = getScaledProgress(progress, max, 24);
-        guiGraphics.blit(BACKGROUND, x + 78, y + 34, 176, 0, arrowWidth, 16);
+        renderProgressArrow(guiGraphics,x,y);
     }
-
-
-    private int getScaledProgress(int progress, int max, int pixels) {
-        if (max <= 0) return 0;
-        return (int) ((long) progress * pixels / max);
+    private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
+        if(menu.isCrafting()) {
+            guiGraphics.blit(menu.getTextureFromSlot(0),x + 61, y + 15, 0, 0, menu.getLoading(), menu.getLoading(), 27, 27);
+            guiGraphics.blit(menu.getTextureFromSlot(1),x + 114, y + 15, 27, 0, -menu.getLoading(), menu.getLoading(), 27, 27);
+            guiGraphics.blit(menu.getTextureFromSlot(2),x + 61, y + 68, 0, 27, menu.getLoading(), -menu.getLoading(), 27, 27);
+            guiGraphics.blit(menu.getTextureFromSlot(3),x + 114, y + 68, 27, 27, -menu.getLoading(), -menu.getLoading(), 27, 27);
+        }
     }
 
     @Override
