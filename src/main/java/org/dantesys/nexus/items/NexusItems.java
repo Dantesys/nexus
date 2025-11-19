@@ -47,8 +47,11 @@ public class NexusItems {
             new Item.Properties());
     public static final Supplier<Item> NUCLEO = ITEMS.registerSimpleItem("nucleo",
             new Item.Properties());
+    public static final Supplier<Item> ACO = ITEMS.registerSimpleItem("aco",
+            new Item.Properties());
 
     public static final Supplier<BlockItem> INFUSOR = ITEMS.registerSimpleBlockItem(NexusBlocks.INFUSOR);
+    public static final Supplier<BlockItem> ACO_BLOCK = ITEMS.registerSimpleBlockItem(NexusBlocks.ACO_BLOCK);
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

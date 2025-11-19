@@ -5,6 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -13,30 +14,36 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
-public record InfusorRecipe(Ingredient inputItem1, Ingredient inputItem2,
-                            Ingredient inputItem3, Ingredient inputItem4,
-                            ItemStack output) implements Recipe<InfusorRecipeInput> {
+import java.util.List;
+
+public record InfusorRecipe(List<Ingredient> inputItem, ItemStack output) implements Recipe<InfusorRecipeInput> {
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
         NonNullList<Ingredient> list = NonNullList.create();
-        list.add(inputItem1);
-        list.add(inputItem2);
-        list.add(inputItem3);
-        list.add(inputItem4);
+        list.addAll(inputItem);
         return list;
     }
 
     @Override
-    public boolean matches(InfusorRecipeInput infusorRecipeInput, Level level) {
-        if (level.isClientSide()) {
-            return false;
+    public boolean matches(InfusorRecipeInput input, Level level) {
+        if (level.isClientSide()) return false;
+        // Cada ingrediente deve usar um slot distinto
+        boolean[] used = new boolean[input.size()];
+        for (Ingredient ingredient : inputItem) {
+            boolean matched = false;
+            for (int j = 0; j < input.size(); j++) {
+                if (!used[j] && ingredient.test(input.getItem(j))) {
+                    used[j] = true;    // reserva o slot
+                    matched = true;
+                    break;
+                }
+            }
+            if (!matched) {
+                return false; // falha se algum ingrediente não encontrou um slot livre correspondente
+            }
         }
-        boolean check = inputItem1.test(infusorRecipeInput.getItem(0));
-        check = check && inputItem2.test(infusorRecipeInput.getItem(1));
-        check = check && inputItem3.test(infusorRecipeInput.getItem(3));
-        check = check && inputItem4.test(infusorRecipeInput.getItem(4));
-        return check;
+        return true;
     }
 
     @Override
@@ -66,19 +73,13 @@ public record InfusorRecipe(Ingredient inputItem1, Ingredient inputItem2,
 
     public static class Serializer implements RecipeSerializer<InfusorRecipe> {
         public static final MapCodec<InfusorRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
-                Ingredient.CODEC_NONEMPTY.fieldOf("input_1").forGetter(InfusorRecipe::inputItem1),
-                Ingredient.CODEC_NONEMPTY.fieldOf("input_2").forGetter(InfusorRecipe::inputItem2),
-                Ingredient.CODEC_NONEMPTY.fieldOf("input_3").forGetter(InfusorRecipe::inputItem3),
-                Ingredient.CODEC_NONEMPTY.fieldOf("input_4").forGetter(InfusorRecipe::inputItem4),
+                Ingredient.LIST_CODEC_NONEMPTY.fieldOf("ingredients").forGetter(InfusorRecipe::inputItem),
                 ItemStack.CODEC.fieldOf("result").forGetter(InfusorRecipe::output)
         ).apply(inst, InfusorRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, InfusorRecipe> STREAM_CODEC =
                 StreamCodec.composite(
-                        Ingredient.CONTENTS_STREAM_CODEC, InfusorRecipe::inputItem1,
-                        Ingredient.CONTENTS_STREAM_CODEC, InfusorRecipe::inputItem2,
-                        Ingredient.CONTENTS_STREAM_CODEC, InfusorRecipe::inputItem3,
-                        Ingredient.CONTENTS_STREAM_CODEC, InfusorRecipe::inputItem4,
+                        Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()),InfusorRecipe::inputItem,
                         ItemStack.STREAM_CODEC, InfusorRecipe::output,
                         InfusorRecipe::new);
 

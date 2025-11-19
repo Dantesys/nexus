@@ -1,0 +1,13 @@
+{
+  "type": "nexus:infusor",
+  "ingredients": [
+    {"item": "nexus:nucleo"},
+    {"item": "nexus:nucleo"},
+    {"item": "minecraft:coal_block"},
+    {"item": "minecraft:iron_block"}
+  ],
+  "result": {
+    "id": "nexus:aco_block",
+    "count": 2
+  }
+}

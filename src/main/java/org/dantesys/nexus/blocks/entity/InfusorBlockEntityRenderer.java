@@ -49,7 +49,7 @@ public class InfusorBlockEntityRenderer implements BlockEntityRenderer<InfusorBl
         }
         poseStack.pushPose();
         poseStack.translate(0.5f, 1.25f, 0.5f);
-        poseStack.scale(0.75f, 0.75f, 0.75f);
+        poseStack.scale(0.5f, 0.5f, 0.5f);
         float bob = (float)Math.sin(time * 0.1) * 0.05f; // sobe e desce
         poseStack.translate(0, bob, 0);
         poseStack.mulPose(Axis.YP.rotationDegrees((float)(time * 90)));

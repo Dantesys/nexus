@@ -2,10 +2,7 @@ package org.dantesys.nexus.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -40,6 +37,14 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('E', NexusTags.Items.EMERALD_ELEMENTAL)
                 .unlockedBy("has_esmerald_elemental", has(NexusTags.Items.EMERALD_ELEMENTAL))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"infusor"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.ACO_BLOCK.get())
+                .pattern("EEE").pattern("EEE").pattern("EEE")
+                .define('E', NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusItems.ACO.get(), 9)
+                .requires(NexusBlocks.ACO_BLOCK)
+                .unlockedBy("has_bismuth_block", has(NexusBlocks.ACO_BLOCK)).save(recipeOutput);
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {

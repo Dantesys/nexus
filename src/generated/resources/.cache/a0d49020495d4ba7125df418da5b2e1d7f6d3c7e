@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-18T16:08:19.3018076	Block States: nexus
-c5f6589ec518f5ae1d288ee14c1cbc1d04d90d1e assets/nexus/blockstates/infusor.json
-ef466aa828e9de6afe2de9d364f7f19985586951 assets/nexus/models/block/infusor.json
-892d39544c406aa53f0d546acf436e69428525b1 assets/nexus/models/item/infusor.json
+// 1.21.1	2025-11-18T22:46:23.3282025	Block States: nexus
+1ea623831e6cf62330ba0f4b95dc80c7c105f80e assets/nexus/blockstates/aco_block.json
+a7c163c1363f276a295c2f01fe58cc969fa6f270 assets/nexus/models/block/aco_block.json
+3b21166fe4dccc54265e6c1fa7c21e3df6a506d3 assets/nexus/models/item/aco_block.json

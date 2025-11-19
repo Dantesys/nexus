@@ -24,5 +24,6 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(NexusBlocks.INFUSOR.get());
+        dropSelf(NexusBlocks.ACO_BLOCK.get());
     }
 }

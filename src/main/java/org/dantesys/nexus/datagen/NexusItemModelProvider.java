@@ -33,6 +33,7 @@ public class NexusItemModelProvider extends ItemModelProvider {
         generateEsmeraldaModel(NexusItems.ESMERALDA_LUZ.get(), "luz");
         generateEsmeraldaModel(NexusItems.ESMERALDA_METAL.get(), "metal");
         generateEsmeraldaModel(NexusItems.ESMERALDA_ROCHA.get(), "rocha");
+        basicItem(NexusItems.ACO.get());
     }
     private void generateFragmentoModel(Item item, String textureName) {
         getBuilder(BuiltInRegistries.ITEM.getKey(item).getPath())

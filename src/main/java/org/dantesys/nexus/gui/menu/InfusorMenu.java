@@ -17,9 +17,6 @@ import java.util.Objects;
 public class InfusorMenu extends AbstractContainerMenu {
     private final InfusorBlockEntity blockEntity;
     private final ContainerLevelAccess access;
-    // slot indexes
-    public static final int SLOT_INPUT_START = 0; // 0,1,2,3
-    public static final int SLOT_OUTPUT = 4;
 
     // ctor used server-side
     public InfusorMenu(int id, Inventory playerInventory, InfusorBlockEntity be) {

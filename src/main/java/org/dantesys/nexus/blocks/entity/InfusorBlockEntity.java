@@ -23,6 +23,8 @@ import org.dantesys.nexus.recipe.InfusorRecipeInput;
 import org.dantesys.nexus.recipe.NexusRecipes;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import static org.dantesys.nexus.blocks.NexusBlocks.INFUSOR_BE;
@@ -123,8 +125,13 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
         return canInsertAmountIntoOutputSlot(output.getCount()) && canInsertItemIntoOutputSlot(output);
     }
     private Optional<RecipeHolder<InfusorRecipe>> getCurrentRecipe() {
+        List<ItemStack> list = new ArrayList<>();
+        list.add(inventory.getStackInSlot(0));
+        list.add(inventory.getStackInSlot(1));
+        list.add(inventory.getStackInSlot(2));
+        list.add(inventory.getStackInSlot(3));
         return this.level.getRecipeManager()
-                .getRecipeFor(NexusRecipes.INFUSOR_TYPE.get(), new InfusorRecipeInput(inventory.getStackInSlot(0),inventory.getStackInSlot(1),inventory.getStackInSlot(2),inventory.getStackInSlot(3)), level);
+                .getRecipeFor(NexusRecipes.INFUSOR_TYPE.get(), new InfusorRecipeInput(list), level);
     }
     private boolean canInsertItemIntoOutputSlot(ItemStack output) {
         return inventory.getStackInSlot(4).isEmpty() ||
@@ -135,5 +142,13 @@ public class InfusorBlockEntity extends BlockEntity implements MenuProvider {
         int currentCount = inventory.getStackInSlot(4).getCount();
 
         return maxCount >= currentCount + count;
+    }
+
+    public void drops() {
+        SimpleContainer inv = new SimpleContainer(inventory.getSlots());
+        for(int i = 0; i < inventory.getSlots(); i++) {
+            inv.setItem(i, inventory.getStackInSlot(i));
+        }
+        Containers.dropContents(this.level, this.worldPosition, inv);
     }
 }
