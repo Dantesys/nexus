@@ -34,6 +34,11 @@ public class NexusItemModelProvider extends ItemModelProvider {
         generateEsmeraldaModel(NexusItems.ESMERALDA_METAL.get(), "metal");
         generateEsmeraldaModel(NexusItems.ESMERALDA_ROCHA.get(), "rocha");
         basicItem(NexusItems.ACO.get());
+        handheldItem(NexusItems.ACO_AXE.get());
+        handheldItem(NexusItems.ACO_HOE.get());
+        handheldItem(NexusItems.ACO_PICKAXE.get());
+        handheldItem(NexusItems.ACO_SWORD.get());
+        handheldItem(NexusItems.ACO_SHOVEL.get());
     }
     private void generateFragmentoModel(Item item, String textureName) {
         getBuilder(BuiltInRegistries.ITEM.getKey(item).getPath())

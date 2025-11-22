@@ -45,6 +45,36 @@ public class NexusRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusItems.ACO.get(), 9)
                 .requires(NexusBlocks.ACO_BLOCK)
                 .unlockedBy("has_bismuth_block", has(NexusBlocks.ACO_BLOCK)).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_PICKAXE.get())
+                .pattern("EEE").pattern(" S ").pattern(" S ")
+                .define('S',Items.STICK)
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_pickaxe"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_AXE.get())
+                .pattern("EE ").pattern("ES ").pattern(" S ")
+                .define('S',Items.STICK)
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_axe"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_SHOVEL.get())
+                .pattern(" E ").pattern(" S ").pattern(" S ")
+                .define('S',Items.STICK)
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_shovel"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_HOE.get())
+                .pattern("EE ").pattern(" S ").pattern(" S ")
+                .define('S',Items.STICK)
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_hoe"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_SWORD.get())
+                .pattern(" E ").pattern(" E ").pattern(" S ")
+                .define('S',Items.STICK)
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_sword"));
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {

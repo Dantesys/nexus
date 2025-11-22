@@ -1,5 +1,10 @@
-// 1.21.1	2025-11-18T22:46:23.3242042	Item Models: nexus
+// 1.21.1	2025-11-22T14:58:35.2020905	Item Models: nexus
 3517dc28ec891c6c2e642c2e5246372537577509 assets/nexus/models/item/aco.json
+7ef9983a06e67f3e8f42adb8d3c99ca232daaa01 assets/nexus/models/item/aco_axe.json
+3a863d1e79c267c97c947fbbe24770c908812cd7 assets/nexus/models/item/aco_hoe.json
+e89ea7fe148ce69a503dfb718c38e2173bd95afb assets/nexus/models/item/aco_pickaxe.json
+e9f27656a7ef900cc7885991135426e7fe19293c assets/nexus/models/item/aco_shovel.json
+0fe310c6ff0f7eec63061e941daaac8fcffe5cdf assets/nexus/models/item/aco_sword.json
 8972ecc67e26aaea7dca1927bb22f52aaa01f908 assets/nexus/models/item/esmeralda_agua.json
 5d3c00b3f83075065ebabbc35477d6163fdc15b4 assets/nexus/models/item/esmeralda_eletrico.json
 90a5fe4550ad1558797a74cf1b7a2a46d3b468a5 assets/nexus/models/item/esmeralda_escuro.json

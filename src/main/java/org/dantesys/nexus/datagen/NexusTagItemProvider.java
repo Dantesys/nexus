@@ -3,6 +3,7 @@ package org.dantesys.nexus.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.dantesys.nexus.Nexus;
@@ -29,5 +30,10 @@ public class NexusTagItemProvider extends ItemTagsProvider {
                 .add(NexusItems.ESMERALDA_METAL.get())
                 .add(NexusItems.ESMERALDA_NATUREZA.get())
                 .add(NexusItems.ESMERALDA_ROCHA.get());
+        tag(ItemTags.AXES).add(NexusItems.ACO_AXE.get());
+        tag(ItemTags.HOES).add(NexusItems.ACO_HOE.get());
+        tag(ItemTags.PICKAXES).add(NexusItems.ACO_PICKAXE.get());
+        tag(ItemTags.SWORDS).add(NexusItems.ACO_SWORD.get());
+        tag(ItemTags.SHOVELS).add(NexusItems.ACO_SHOVEL.get());
     }
 }

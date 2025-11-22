@@ -1,2 +1,7 @@
-// 1.21.1	2025-11-18T21:39:58.5293588	Tags for minecraft:item mod id nexus
+// 1.21.1	2025-11-22T14:58:35.194089	Tags for minecraft:item mod id nexus
+cb3ecee667983ffc14f80be739dea5b40154c628 data/minecraft/tags/item/axes.json
+58fa6c1ed6d85f68d9cdb5b05a6d9074da7dd91f data/minecraft/tags/item/hoes.json
+c979a149f2e2e5d0daaeaf51622055477b989e5c data/minecraft/tags/item/pickaxes.json
+ec6e0baaf0a69fe0eb2645a6df0cb0b99c6fd145 data/minecraft/tags/item/shovels.json
+364c9a3af0055f648ad87d0beb176dfd1c80fee5 data/minecraft/tags/item/swords.json
 bf6d3b7c43c5472774fac5b5f000a9d5ff87b0ab data/nexus/tags/item/esmeralda_elemental.json

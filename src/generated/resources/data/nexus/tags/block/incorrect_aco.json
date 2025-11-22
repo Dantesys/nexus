@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#nexus:need_aco"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

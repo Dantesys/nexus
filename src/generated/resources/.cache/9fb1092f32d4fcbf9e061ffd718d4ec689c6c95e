@@ -1,6 +1,11 @@
-// 1.21.1	2025-11-18T22:46:23.3201107	Recipes
+// 1.21.1	2025-11-22T14:58:35.1990852	Recipes
 96de3252437786947cc55ee8dae15296a54bf76b data/nexus/advancement/recipes/misc/aco.json
+c4d96b74960d625a4d4ae16fca1e662c2f3fcf7f data/nexus/advancement/recipes/misc/aco_axe.json
 14f8daf946f525a1072bbf37a75318b43ea7de8b data/nexus/advancement/recipes/misc/aco_block.json
+131bd555a46ba48fd4ff0b3177773228d025af71 data/nexus/advancement/recipes/misc/aco_hoe.json
+0cd33f469247872d513a5fda986d07ab0a78bf7d data/nexus/advancement/recipes/misc/aco_pickaxe.json
+aaed96215d1dd2fc2aa2b4f0625b4b4facf6e55a data/nexus/advancement/recipes/misc/aco_shovel.json
+bf012a7a84e7a822488e928082ee3283af2bf7cc data/nexus/advancement/recipes/misc/aco_sword.json
 e7ddc6649f255c21490fae9f9a92de6c3626e231 data/nexus/advancement/recipes/misc/esmeralda_agua.json
 4cba88d2c03b94c739b28976cec689ae146608af data/nexus/advancement/recipes/misc/esmeralda_eletrico.json
 66c16a1805d6f2d2abfe0350f1478077596e7f88 data/nexus/advancement/recipes/misc/esmeralda_escuro.json
@@ -11,7 +16,12 @@ e3027e3e993a69f5d4262db0cb9acb292236f5c3 data/nexus/advancement/recipes/misc/esm
 a26bcd80daec6db2616958cabc468958fe7c728b data/nexus/advancement/recipes/misc/esmeralda_rocha.json
 b3284ee4807b07c31d3c6704313f48057bd4fc6c data/nexus/advancement/recipes/misc/infusor.json
 ec49329592356646f7747a9b52ab9bc5619ed654 data/nexus/recipe/aco.json
+e4cf1d76d1111b786741dea15cc8d162ebadf8cc data/nexus/recipe/aco_axe.json
 de901d9d40c0abbda5f1bf2d439bdc55cd7b7759 data/nexus/recipe/aco_block.json
+b4c499cd1f85b2f66d65fe6831539c1515162b33 data/nexus/recipe/aco_hoe.json
+49aa068b4ce6ebd06253af7086ae9f891e25bc38 data/nexus/recipe/aco_pickaxe.json
+3204d1f73185dd2c15192b6d91b34c9f91587f1f data/nexus/recipe/aco_shovel.json
+0f481b0911dbe84844a348fe893dc0f88d5dae04 data/nexus/recipe/aco_sword.json
 9348d3d877410bb33dfe43968fa1ddc2b1ec028f data/nexus/recipe/esmeralda_agua.json
 95d9838ef33852e4ed3a62db2f368648662aa558 data/nexus/recipe/esmeralda_eletrico.json
 71473f6631cb4aa302a1546b2fa56b18a4651b86 data/nexus/recipe/esmeralda_escuro.json

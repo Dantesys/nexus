@@ -10,6 +10,8 @@ import org.dantesys.nexus.Nexus;
 
 public class NexusTags {
     public static class Blocks{
+        public static final TagKey<Block> NEED_ACO = createTag("need_aco");
+        public static final TagKey<Block> INCORRECT_ACO = createTag("incorrect_aco");
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Nexus.MODID, name));
         }
