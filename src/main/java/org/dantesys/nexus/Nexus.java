@@ -2,7 +2,6 @@ package org.dantesys.nexus;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -21,7 +20,6 @@ import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntityRenderer;
 import org.dantesys.nexus.datagen.NexusDatagen;
 import org.dantesys.nexus.gui.NexusMenus;
-import org.dantesys.nexus.gui.menu.InfusorMenu;
 import org.dantesys.nexus.gui.screen.InfusorScreen;
 import org.dantesys.nexus.items.NexusCreativeTab;
 import org.dantesys.nexus.items.NexusItems;

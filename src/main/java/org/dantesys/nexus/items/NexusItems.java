@@ -2,6 +2,7 @@ package org.dantesys.nexus.items;
 
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.dantesys.nexus.blocks.NexusBlocks;
 
@@ -58,7 +59,20 @@ public class NexusItems {
             () -> new HoeItem(NexusToolTier.ACO,new Item.Properties().attributes(HoeItem.createAttributes(NexusToolTier.ACO,-2.0F,-1F))));
     public static final Supplier<ShovelItem> ACO_SHOVEL = ITEMS.register("aco_shovel",
             () -> new ShovelItem(NexusToolTier.ACO,new Item.Properties().attributes(ShovelItem.createAttributes(NexusToolTier.ACO,1.5F,-3F))));
-
+    public static final DeferredItem<ArmorItem> ACO_HELMET = ITEMS.register("aco_helmet",
+            () -> new ArmorItem(NexusArmorMaterial.ACO_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(17))));
+    public static final DeferredItem<ArmorItem> ACO_CHESTPLATE = ITEMS.register("aco_chestplate",
+            () -> new ArmorItem(NexusArmorMaterial.ACO_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(17))));
+    public static final DeferredItem<ArmorItem> ACO_LEGGINGS = ITEMS.register("aco_leggings",
+            () -> new ArmorItem(NexusArmorMaterial.ACO_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(17))));
+    public static final DeferredItem<ArmorItem> ACO_BOOTS = ITEMS.register("aco_boots",
+            () -> new ArmorItem(NexusArmorMaterial.ACO_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(17))));
+    
+    
     public static final Supplier<BlockItem> INFUSOR = ITEMS.registerSimpleBlockItem(NexusBlocks.INFUSOR);
     public static final Supplier<BlockItem> ACO_BLOCK = ITEMS.registerSimpleBlockItem(NexusBlocks.ACO_BLOCK);
 

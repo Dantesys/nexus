@@ -75,6 +75,26 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('E',NexusItems.ACO.get())
                 .unlockedBy("has_aco", has(NexusItems.ACO.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_sword"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_HELMET.get())
+                .pattern("EEE").pattern("E E")
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_helmet"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_CHESTPLATE.get())
+                .pattern("E E").pattern("EEE").pattern("EEE")
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_chestplate"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_LEGGINGS.get())
+                .pattern("EEE").pattern("E E").pattern("E E")
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_leggings"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusItems.ACO_BOOTS.get())
+                .pattern("E E").pattern("E E")
+                .define('E',NexusItems.ACO.get())
+                .unlockedBy("has_aco", has(NexusItems.ACO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"aco_boots"));
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {

@@ -1,8 +1,12 @@
-// 1.21.1	2025-11-22T14:58:35.1990852	Recipes
+// 1.21.1	2025-11-24T15:45:44.054882	Recipes
 96de3252437786947cc55ee8dae15296a54bf76b data/nexus/advancement/recipes/misc/aco.json
 c4d96b74960d625a4d4ae16fca1e662c2f3fcf7f data/nexus/advancement/recipes/misc/aco_axe.json
 14f8daf946f525a1072bbf37a75318b43ea7de8b data/nexus/advancement/recipes/misc/aco_block.json
+d928c213f2a0474f75c01537064a6757f6cf1314 data/nexus/advancement/recipes/misc/aco_boots.json
+41a1973ebaf95e440656283181401f59134b786a data/nexus/advancement/recipes/misc/aco_chestplate.json
+2f25ae049fed8cf174a4f401bbf5bce93ba299a1 data/nexus/advancement/recipes/misc/aco_helmet.json
 131bd555a46ba48fd4ff0b3177773228d025af71 data/nexus/advancement/recipes/misc/aco_hoe.json
+a028d81b32e3a34288ea89710c8f410c373aa86d data/nexus/advancement/recipes/misc/aco_leggings.json
 0cd33f469247872d513a5fda986d07ab0a78bf7d data/nexus/advancement/recipes/misc/aco_pickaxe.json
 aaed96215d1dd2fc2aa2b4f0625b4b4facf6e55a data/nexus/advancement/recipes/misc/aco_shovel.json
 bf012a7a84e7a822488e928082ee3283af2bf7cc data/nexus/advancement/recipes/misc/aco_sword.json
@@ -18,7 +22,11 @@ b3284ee4807b07c31d3c6704313f48057bd4fc6c data/nexus/advancement/recipes/misc/inf
 ec49329592356646f7747a9b52ab9bc5619ed654 data/nexus/recipe/aco.json
 e4cf1d76d1111b786741dea15cc8d162ebadf8cc data/nexus/recipe/aco_axe.json
 de901d9d40c0abbda5f1bf2d439bdc55cd7b7759 data/nexus/recipe/aco_block.json
+9e1230cfe20e36dd3667364750a6b64b37e1973b data/nexus/recipe/aco_boots.json
+7a3e9145d8f61362dd57ae9ff435ba61a0fab2a7 data/nexus/recipe/aco_chestplate.json
+ec331ec3ccaef3f5986f6b6102952c6690d0a24a data/nexus/recipe/aco_helmet.json
 b4c499cd1f85b2f66d65fe6831539c1515162b33 data/nexus/recipe/aco_hoe.json
+39842de3cceaec5c0a02cc7311d5377f2f5831a4 data/nexus/recipe/aco_leggings.json
 49aa068b4ce6ebd06253af7086ae9f891e25bc38 data/nexus/recipe/aco_pickaxe.json
 3204d1f73185dd2c15192b6d91b34c9f91587f1f data/nexus/recipe/aco_shovel.json
 0f481b0911dbe84844a348fe893dc0f88d5dae04 data/nexus/recipe/aco_sword.json
