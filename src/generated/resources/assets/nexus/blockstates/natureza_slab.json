@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nexus:block/natureza_slab"
+    },
+    "type=double": {
+      "model": "nexus:block/natureza_planks"
+    },
+    "type=top": {
+      "model": "nexus:block/natureza_slab_top"
+    }
+  }
+}

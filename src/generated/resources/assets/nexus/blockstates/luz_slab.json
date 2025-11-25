@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nexus:block/luz_slab"
+    },
+    "type=double": {
+      "model": "nexus:block/luz_planks"
+    },
+    "type=top": {
+      "model": "nexus:block/luz_slab_top"
+    }
+  }
+}

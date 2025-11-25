@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "nexus:block/fogo_planks",
+    "side": "nexus:block/fogo_planks",
+    "top": "nexus:block/fogo_planks"
+  }
+}

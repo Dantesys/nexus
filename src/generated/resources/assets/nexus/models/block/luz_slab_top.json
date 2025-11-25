@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "nexus:block/luz_planks",
+    "side": "nexus:block/luz_planks",
+    "top": "nexus:block/luz_planks"
+  }
+}

@@ -14,6 +14,7 @@ import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredItem;
 import org.dantesys.nexus.Nexus;
+import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.items.NexusItems;
 
 import java.util.LinkedHashMap;
@@ -65,6 +66,14 @@ public class NexusItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(NexusItems.ACO_CHESTPLATE);
         trimmedArmorItem(NexusItems.ACO_LEGGINGS);
         trimmedArmorItem(NexusItems.ACO_BOOTS);
+        basicItem(NexusBlocks.AGUA_DOOR.asItem());
+        basicItem(NexusBlocks.ELETRICO_DOOR.asItem());
+        basicItem(NexusBlocks.ESCURO_DOOR.asItem());
+        basicItem(NexusBlocks.FOGO_DOOR.asItem());
+        basicItem(NexusBlocks.LUZ_DOOR.asItem());
+        basicItem(NexusBlocks.METAL_DOOR.asItem());
+        basicItem(NexusBlocks.NATUREZA_DOOR.asItem());
+        basicItem(NexusBlocks.ROCHA_DOOR.asItem());
     }
     private void generateFragmentoModel(Item item, String textureName) {
         getBuilder(BuiltInRegistries.ITEM.getKey(item).getPath())

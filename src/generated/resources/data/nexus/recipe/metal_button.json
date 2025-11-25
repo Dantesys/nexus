@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "metal",
+  "ingredients": [
+    {
+      "item": "nexus:metal_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:metal_button"
+  }
+}

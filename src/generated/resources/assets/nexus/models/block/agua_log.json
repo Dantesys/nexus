@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "nexus:block/agua_log_top",
+    "side": "nexus:block/agua_log"
+  }
+}

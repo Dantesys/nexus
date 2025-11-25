@@ -1,0 +1,12 @@
+{
+  "values": [
+    "nexus:agua_fence",
+    "nexus:eletrico_fence",
+    "nexus:escuro_fence",
+    "nexus:fogo_fence",
+    "nexus:luz_fence",
+    "nexus:metal_fence",
+    "nexus:natureza_fence",
+    "nexus:rocha_fence"
+  ]
+}

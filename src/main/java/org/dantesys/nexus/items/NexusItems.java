@@ -71,10 +71,6 @@ public class NexusItems {
     public static final DeferredItem<ArmorItem> ACO_BOOTS = ITEMS.register("aco_boots",
             () -> new ArmorItem(NexusArmorMaterial.ACO_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(17))));
-    
-    
-    public static final Supplier<BlockItem> INFUSOR = ITEMS.registerSimpleBlockItem(NexusBlocks.INFUSOR);
-    public static final Supplier<BlockItem> ACO_BLOCK = ITEMS.registerSimpleBlockItem(NexusBlocks.ACO_BLOCK);
 
     public static void register(IEventBus bus){
         ITEMS.register(bus);

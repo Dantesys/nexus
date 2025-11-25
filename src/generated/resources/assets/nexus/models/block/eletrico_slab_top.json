@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "nexus:block/eletrico_planks",
+    "side": "nexus:block/eletrico_planks",
+    "top": "nexus:block/eletrico_planks"
+  }
+}

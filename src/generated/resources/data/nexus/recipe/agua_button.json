@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "agua",
+  "ingredients": [
+    {
+      "item": "nexus:agua_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:agua_button"
+  }
+}

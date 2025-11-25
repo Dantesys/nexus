@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "nexus:block/rocha_planks",
+    "side": "nexus:block/rocha_planks",
+    "top": "nexus:block/rocha_planks"
+  }
+}

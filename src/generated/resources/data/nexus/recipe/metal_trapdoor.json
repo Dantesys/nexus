@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "metal",
+  "key": {
+    "#": {
+      "item": "nexus:metal_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "nexus:metal_trapdoor"
+  }
+}

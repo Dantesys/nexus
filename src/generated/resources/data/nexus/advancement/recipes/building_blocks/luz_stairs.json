@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_luz": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:luz_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:luz_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_luz"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:luz_stairs"
+    ]
+  }
+}

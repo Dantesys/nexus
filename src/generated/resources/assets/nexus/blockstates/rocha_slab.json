@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nexus:block/rocha_slab"
+    },
+    "type=double": {
+      "model": "nexus:block/rocha_planks"
+    },
+    "type=top": {
+      "model": "nexus:block/rocha_slab_top"
+    }
+  }
+}

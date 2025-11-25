@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "escuro",
+  "ingredients": [
+    {
+      "item": "nexus:escuro_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:escuro_button"
+  }
+}

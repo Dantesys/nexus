@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rocha": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:rocha_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:rocha_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rocha"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:rocha_fence_gate"
+    ]
+  }
+}

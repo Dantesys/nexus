@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "rocha",
+  "ingredients": [
+    {
+      "item": "nexus:rocha_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:rocha_button"
+  }
+}

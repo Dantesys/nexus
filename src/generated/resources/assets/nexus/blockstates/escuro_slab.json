@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nexus:block/escuro_slab"
+    },
+    "type=double": {
+      "model": "nexus:block/escuro_planks"
+    },
+    "type=top": {
+      "model": "nexus:block/escuro_slab_top"
+    }
+  }
+}

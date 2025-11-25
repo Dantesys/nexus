@@ -1,0 +1,20 @@
+{
+  "values": [
+    "nexus:agua_log",
+    "nexus:stripped_agua_log",
+    "nexus:eletrico_log",
+    "nexus:stripped_eletrico_log",
+    "nexus:escuro_log",
+    "nexus:stripped_escuro_log",
+    "nexus:fogo_log",
+    "nexus:stripped_fogo_log",
+    "nexus:luz_log",
+    "nexus:stripped_luz_log",
+    "nexus:metal_log",
+    "nexus:stripped_metal_log",
+    "nexus:natureza_log",
+    "nexus:stripped_natureza_log",
+    "nexus:rocha_log",
+    "nexus:stripped_rocha_log"
+  ]
+}
