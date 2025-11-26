@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-25T17:02:15.4527445	Block States: nexus
+// 1.21.1	2025-11-25T20:12:20.3174795	Block States: nexus
 1ea623831e6cf62330ba0f4b95dc80c7c105f80e assets/nexus/blockstates/aco_block.json
 a7373037d933bb6bdd647897bb51e9729f3e893e assets/nexus/blockstates/agua_button.json
 85d097da0314100d563ffaf1ccc971dd87391820 assets/nexus/blockstates/agua_door.json
@@ -377,7 +377,7 @@ e11ee64dfd87a8346e30e28328fefea1ad2316c2 assets/nexus/models/item/agua_log.json
 39995e1e360ad837b8ce017ef5ca66ff2bcdb689 assets/nexus/models/item/agua_pressure_plate.json
 d9801e82026bf488196a9d9b636997e27ae66f6c assets/nexus/models/item/agua_slab.json
 1338b37b34da2b5fa6e8265d46e166928c0740a6 assets/nexus/models/item/agua_stairs.json
-a8874f6e8e534b58ad109e11e3e91803aee57ecb assets/nexus/models/item/agua_trapdoor.json
+b77e11b9545fc86203e5db016d56db9ba9c064ba assets/nexus/models/item/agua_trapdoor.json
 6f5094963f8fe2da401cfaea71e183d978d76709 assets/nexus/models/item/eletrico_fence_gate.json
 161452a369d552ed11bfa4fbb6f0faeaec893387 assets/nexus/models/item/eletrico_leaves.json
 5705343841db2f15876809663223711bf5737d10 assets/nexus/models/item/eletrico_log.json
@@ -385,7 +385,7 @@ a8874f6e8e534b58ad109e11e3e91803aee57ecb assets/nexus/models/item/agua_trapdoor.
 08c7c4c062e2d0b99badf46dcc5fb6d8511c0bcd assets/nexus/models/item/eletrico_pressure_plate.json
 95eaaadb9255b1e9d563ed26fabfb08a415e2d85 assets/nexus/models/item/eletrico_slab.json
 067031a000cba307761eaf4a89d66399c853fff0 assets/nexus/models/item/eletrico_stairs.json
-bc5ea07dcbdb77be760e195d839cf980248ff4d7 assets/nexus/models/item/eletrico_trapdoor.json
+31070eda476d9212587213148d8391d3f527cf60 assets/nexus/models/item/eletrico_trapdoor.json
 4a35623361faf0f114ae297e5c89042ce79c8c8b assets/nexus/models/item/escuro_fence_gate.json
 dc8c98eb957cae7a300dcc97d4edbec746db6735 assets/nexus/models/item/escuro_leaves.json
 93c64a2975c1d52ebbab29429bd1cbbe80004dbe assets/nexus/models/item/escuro_log.json
@@ -393,7 +393,7 @@ dc8c98eb957cae7a300dcc97d4edbec746db6735 assets/nexus/models/item/escuro_leaves.
 e636b528abf39899bdd216fb7e52d7c27c2ba03a assets/nexus/models/item/escuro_pressure_plate.json
 c9d5f3ca6ff514fa6544bb94358aea96a40b50aa assets/nexus/models/item/escuro_slab.json
 b1b05bddcdfb8d413d61ebe7d009eaf8a419dbe4 assets/nexus/models/item/escuro_stairs.json
-e89a01cd6597e94c60a95ab2cc12e9c20d4ac8b5 assets/nexus/models/item/escuro_trapdoor.json
+071177a435ffc1b92e36a74e01b3e28441fdac3e assets/nexus/models/item/escuro_trapdoor.json
 a27784017c3172f25c1576cf1e643468475c26c9 assets/nexus/models/item/fogo_fence_gate.json
 a6a841e4b02da701a74dd5f277dd9f6e5e84a3ac assets/nexus/models/item/fogo_leaves.json
 11e1aa9ade63defa840981c0d99c733c2eb5b4e4 assets/nexus/models/item/fogo_log.json
@@ -401,7 +401,7 @@ a6a841e4b02da701a74dd5f277dd9f6e5e84a3ac assets/nexus/models/item/fogo_leaves.js
 7187fdb7f30dcbec55448c5115181ebbd05247d8 assets/nexus/models/item/fogo_pressure_plate.json
 494859db291dcafa7ff4fa47a8d42a6b9767279a assets/nexus/models/item/fogo_slab.json
 ef3397af86099decae3f4c0fc3d360c847234420 assets/nexus/models/item/fogo_stairs.json
-1a7c29800df35c6f77d1ea4b15ec07a491249aee assets/nexus/models/item/fogo_trapdoor.json
+49151b55491d49a237d69efd134804b20ea71ef0 assets/nexus/models/item/fogo_trapdoor.json
 b1aa0f1f590cd30555559ba9f3adf71c71bb22ff assets/nexus/models/item/luz_fence_gate.json
 5dab80e65c6872f5f2c78e2bf755b75c7b0d60f6 assets/nexus/models/item/luz_leaves.json
 21c088deeac1375492dee5c46c0b0e20639cb1f6 assets/nexus/models/item/luz_log.json
@@ -409,7 +409,7 @@ b1aa0f1f590cd30555559ba9f3adf71c71bb22ff assets/nexus/models/item/luz_fence_gate
 ea96f485ce6b2f2934c53ba3a8e012e32d156bc1 assets/nexus/models/item/luz_pressure_plate.json
 715b614b86f9fce520f252c3a706e3cd55b9beee assets/nexus/models/item/luz_slab.json
 563b169c296872b2a0f28430220ed462289e6f81 assets/nexus/models/item/luz_stairs.json
-35c67be8d6782b16eda7fd5eca5c421c2c3d582a assets/nexus/models/item/luz_trapdoor.json
+8d6872795dbb33ac1d67c59dd4d0eab134d845d2 assets/nexus/models/item/luz_trapdoor.json
 6260fb88fc136c4e941fd5218320882ccc6b9b59 assets/nexus/models/item/metal_fence_gate.json
 ae99dc8eca7e54a1d6653c2882ee7331fea80011 assets/nexus/models/item/metal_leaves.json
 a8befe3975888330e921f60dd7d12267424db865 assets/nexus/models/item/metal_log.json
@@ -417,7 +417,7 @@ a8befe3975888330e921f60dd7d12267424db865 assets/nexus/models/item/metal_log.json
 7651003cae773ae9722bbbdb6ca045e903bcb0db assets/nexus/models/item/metal_pressure_plate.json
 3d827b34cc426873d193c71c5a945eb1d06c85a2 assets/nexus/models/item/metal_slab.json
 57b938d6f715115753e8bd7081a838a5d8e6a1d1 assets/nexus/models/item/metal_stairs.json
-d7ff9c47b7d8efbdbb9a7b53f4f5533750dc6d0a assets/nexus/models/item/metal_trapdoor.json
+aa8b0cec3d7ae0131414aab15f7d0aa33c8ac73f assets/nexus/models/item/metal_trapdoor.json
 61ff744b0152bc499433b4b2f10046a536b514c0 assets/nexus/models/item/natureza_fence_gate.json
 69f18cada14983d461959bf6020b3e867f50593c assets/nexus/models/item/natureza_leaves.json
 c71d21b5952eea8063bba53b2ac4f008156f7ec9 assets/nexus/models/item/natureza_log.json
@@ -425,7 +425,7 @@ c71d21b5952eea8063bba53b2ac4f008156f7ec9 assets/nexus/models/item/natureza_log.j
 7ad42a9b4f6459680b28009b2e32fc7935dbd6d8 assets/nexus/models/item/natureza_pressure_plate.json
 fd9eafce2f9df785ce44d76826a1dec842326aaf assets/nexus/models/item/natureza_slab.json
 fe63cb494b7ac4264a4ede3e5a96b32eb3017ec3 assets/nexus/models/item/natureza_stairs.json
-1924197838534019e4a24015d39d11af64e36f1d assets/nexus/models/item/natureza_trapdoor.json
+59a68873ed26e12881102d274e7501a19d0ab93a assets/nexus/models/item/natureza_trapdoor.json
 85a9d5e0f54f4c9f1c918a77514bc41887c48ca7 assets/nexus/models/item/rocha_fence_gate.json
 2b6430a32b9f1d48c35528618f5974c2db7c7380 assets/nexus/models/item/rocha_leaves.json
 c485b085936b88fb68f9796130f8ff152ede3d70 assets/nexus/models/item/rocha_log.json
@@ -433,7 +433,7 @@ c485b085936b88fb68f9796130f8ff152ede3d70 assets/nexus/models/item/rocha_log.json
 74f24df3f0bcbe49523a4e4261c27d3a0d13f68c assets/nexus/models/item/rocha_pressure_plate.json
 d39fde2a18847262ef20a020a75749dd3d863feb assets/nexus/models/item/rocha_slab.json
 280bb5ab93db680fec6ce879de13d7eb30636d58 assets/nexus/models/item/rocha_stairs.json
-42b5caed2b5b2ebeef8aca12ba2e64a40b675cfe assets/nexus/models/item/rocha_trapdoor.json
+cb1993531cabb28b6bf76dfc7fb47662845847df assets/nexus/models/item/rocha_trapdoor.json
 0082a31f757b1ac3ed1e9e5952cc9ca171bb8de5 assets/nexus/models/item/stripped_agua_log.json
 f09484dff5efe49a714a1ff9360f5dd364ed89e0 assets/nexus/models/item/stripped_eletrico_log.json
 75f584bc8d135d65369bab7ae66fd530ee18296a assets/nexus/models/item/stripped_escuro_log.json

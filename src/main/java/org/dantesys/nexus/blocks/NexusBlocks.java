@@ -3,7 +3,6 @@ package org.dantesys.nexus.blocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -11,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
+import org.dantesys.nexus.worldgen.tree.NexusTreeGrowers;
 import org.dantesys.nexus.items.NexusItems;
 
 import java.util.function.Supplier;
@@ -35,7 +35,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> AGUA_PLANKS = registerBlock("agua_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> AGUA_SAPLING = registerBlock("agua_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.AGUA,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> AGUA_DOOR = registerBlock("agua_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> AGUA_TRAPDOOR = registerBlock("agua_trapdoor",
@@ -62,7 +62,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> ESCURO_PLANKS = registerBlock("escuro_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> ESCURO_SAPLING = registerBlock("escuro_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.ESCURO,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> ESCURO_DOOR = registerBlock("escuro_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> ESCURO_TRAPDOOR = registerBlock("escuro_trapdoor",
@@ -89,7 +89,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> ELETRICO_PLANKS = registerBlock("eletrico_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> ELETRICO_SAPLING = registerBlock("eletrico_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.ELETRICO,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> ELETRICO_DOOR = registerBlock("eletrico_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> ELETRICO_TRAPDOOR = registerBlock("eletrico_trapdoor",
@@ -116,7 +116,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> FOGO_PLANKS = registerBlock("fogo_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> FOGO_SAPLING = registerBlock("fogo_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.FOGO,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> FOGO_DOOR = registerBlock("fogo_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> FOGO_TRAPDOOR = registerBlock("fogo_trapdoor",
@@ -143,7 +143,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> LUZ_PLANKS = registerBlock("luz_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> LUZ_SAPLING = registerBlock("luz_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.LUZ,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> LUZ_DOOR = registerBlock("luz_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> LUZ_TRAPDOOR = registerBlock("luz_trapdoor",
@@ -170,7 +170,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> METAL_PLANKS = registerBlock("metal_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> METAL_SAPLING = registerBlock("metal_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.METAL,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> METAL_DOOR = registerBlock("metal_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> METAL_TRAPDOOR = registerBlock("metal_trapdoor",
@@ -197,7 +197,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> NATUREZA_PLANKS = registerBlock("natureza_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> NATUREZA_SAPLING = registerBlock("natureza_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.NATUREZA,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> NATUREZA_DOOR = registerBlock("natureza_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> NATUREZA_TRAPDOOR = registerBlock("natureza_trapdoor",
@@ -224,7 +224,7 @@ public class NexusBlocks {
     public static final DeferredBlock<Block> ROCHA_PLANKS = registerBlock("rocha_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final DeferredBlock<SaplingBlock> ROCHA_SAPLING = registerBlock("rocha_sapling",
-            () -> new SaplingBlock(TreeGrower.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(NexusTreeGrowers.ROCHA,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
     public static final DeferredBlock<DoorBlock> ROCHA_DOOR = registerBlock("rocha_door",
             () -> new DoorBlock(BlockSetType.OAK,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR)));
     public static final DeferredBlock<TrapDoorBlock> ROCHA_TRAPDOOR = registerBlock("rocha_trapdoor",

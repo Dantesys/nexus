@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-25T17:02:15.3478755	Item Models: nexus
+// 1.21.1	2025-11-25T20:12:20.3072484	Item Models: nexus
 3517dc28ec891c6c2e642c2e5246372537577509 assets/nexus/models/item/aco.json
 7ef9983a06e67f3e8f42adb8d3c99ca232daaa01 assets/nexus/models/item/aco_axe.json
 f9cb6d644c4933d64cf7db03d15e976a39b69149 assets/nexus/models/item/aco_boots.json
@@ -49,6 +49,18 @@ b9522b5471cb07f5c4e4cbb246b04353c83aee99 assets/nexus/models/item/aco_leggings_q
 e89ea7fe148ce69a503dfb718c38e2173bd95afb assets/nexus/models/item/aco_pickaxe.json
 e9f27656a7ef900cc7885991135426e7fe19293c assets/nexus/models/item/aco_shovel.json
 0fe310c6ff0f7eec63061e941daaac8fcffe5cdf assets/nexus/models/item/aco_sword.json
+0b0ef91c01192c03f6cadfa3ac72cad720b7aaf6 assets/nexus/models/item/agua_button.json
+cc02ad3cda09d83aef13ce88269e3d343a7ca724 assets/nexus/models/item/agua_door.json
+4df7623507903f081bd41925924521d92e1107bb assets/nexus/models/item/agua_fence.json
+dc37c5e386cf6a3ed044a65369ac87e1720bea7b assets/nexus/models/item/agua_sapling.json
+d9ef59316ccf8e080b340875fd83e473b8f2e595 assets/nexus/models/item/eletrico_button.json
+f4901db87b9b0a94087bab1f29cd0a36483b3b25 assets/nexus/models/item/eletrico_door.json
+d63d45a78d6b13150b16967f822ed3603c4e966d assets/nexus/models/item/eletrico_fence.json
+a4f5964e5baf0d139a763496cb6fe405ef71e89b assets/nexus/models/item/eletrico_sapling.json
+e308ae57cee43037cd22e4197acc2ea1b8fcd011 assets/nexus/models/item/escuro_button.json
+6f52a866175ec014a71dd05a01577d46923775cd assets/nexus/models/item/escuro_door.json
+06e8d8bf22b7f9290b28a55ca2b65da1992ca2d8 assets/nexus/models/item/escuro_fence.json
+c956a1ed166605e6400c049e824595d6dc88d93b assets/nexus/models/item/escuro_sapling.json
 8972ecc67e26aaea7dca1927bb22f52aaa01f908 assets/nexus/models/item/esmeralda_agua.json
 5d3c00b3f83075065ebabbc35477d6163fdc15b4 assets/nexus/models/item/esmeralda_eletrico.json
 90a5fe4550ad1558797a74cf1b7a2a46d3b468a5 assets/nexus/models/item/esmeralda_escuro.json
@@ -57,6 +69,10 @@ e9f27656a7ef900cc7885991135426e7fe19293c assets/nexus/models/item/aco_shovel.jso
 c76ffc248eb9f0a5a26616609cf20cdd78215fa1 assets/nexus/models/item/esmeralda_metal.json
 121ff45db5605430a05d794f3542594ccab24b3d assets/nexus/models/item/esmeralda_natureza.json
 d5fc03c8405307daa934143466e9cc200c6190d7 assets/nexus/models/item/esmeralda_rocha.json
+49e989adb0da3d8a2d21a7a111615044369791a3 assets/nexus/models/item/fogo_button.json
+b46969fe81c6b7fecb031f458c2655179278b96c assets/nexus/models/item/fogo_door.json
+edc2a1c0c5a56928296a2fd0b58c3e3467d4c058 assets/nexus/models/item/fogo_fence.json
+85ba2aecb698ad90e4e99f4bb3140346266ec843 assets/nexus/models/item/fogo_sapling.json
 f7c96d3a591f208ba4c863c1f8324271721777cc assets/nexus/models/item/fragmento_agua.json
 3e658cac1a23091a065f6619cf3d673e0d57dac6 assets/nexus/models/item/fragmento_eletrico.json
 e10ce896a2c6579318129c2db4debda7aea23f45 assets/nexus/models/item/fragmento_escuro.json
@@ -65,3 +81,19 @@ f339f8fbece330de539dd76146857751437bd467 assets/nexus/models/item/fragmento_fogo
 b84f1c2709041a317c89d3fe11eb8886ba345800 assets/nexus/models/item/fragmento_metal.json
 708d472d9fe7f1efef462e1c58b9309b8d9cd9fd assets/nexus/models/item/fragmento_natureza.json
 07ab63d9a06f903b0b0f6ba21b7b8e372cc56a0c assets/nexus/models/item/fragmento_rocha.json
+582a346f37e8d075f4bbbce2b6de618a340e2eb2 assets/nexus/models/item/luz_button.json
+3eff31ad4d5b9789b9a71a7cc11e8ed75835f50b assets/nexus/models/item/luz_door.json
+0ddca5c108c945b65d844016ed78e0da1fb3dbeb assets/nexus/models/item/luz_fence.json
+aa9ebbf7110fed40221b13c97fa3d56d86f5bbfc assets/nexus/models/item/luz_sapling.json
+be4a2e88daedfffacb9edbd1b5ec29f4de16ba39 assets/nexus/models/item/metal_button.json
+02cb5451e46645bf4774785adf7102dc9ae4d45c assets/nexus/models/item/metal_door.json
+1cc1402b4caf9e60a310b7d8fb83f9ec054dfee6 assets/nexus/models/item/metal_fence.json
+a89b6d074b7cc6b8026f03d485acae9345071e8d assets/nexus/models/item/metal_sapling.json
+90144114682da368ef50cabd730d821f212c9e88 assets/nexus/models/item/natureza_button.json
+3c538764bba538c2e7414f935e4bc58e6a7af3c5 assets/nexus/models/item/natureza_door.json
+eb83acc67c7712abc1fb0f7c078d09ec2f93b8b7 assets/nexus/models/item/natureza_fence.json
+5e3c9e6d9a35e46cba101b5574f0efb46da4e74a assets/nexus/models/item/natureza_sapling.json
+b1d4e6c90e4cd04f7921d67d4c4d0807ba458053 assets/nexus/models/item/rocha_button.json
+3f006fc83c0be15c127039bedc0c85850ee85147 assets/nexus/models/item/rocha_door.json
+aaacca580f64aae0851fa98845cb44bfd184dd25 assets/nexus/models/item/rocha_fence.json
+706c5401a3fd0140f655ac9d36259a0c0472d3af assets/nexus/models/item/rocha_sapling.json

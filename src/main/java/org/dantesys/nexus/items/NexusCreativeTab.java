@@ -18,9 +18,11 @@ public class NexusCreativeTab {
             .title(Component.translatable("itemGroup.nexus_itens"))
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> NexusItems.FRAGMENTO_FOGO.get().getDefaultInstance())
-            .displayItems((parameters, output) -> {
-                NexusItems.ITEMS.getEntries().forEach(item -> {if(!NexusBlocks.BLOCKS.getEntries().contains(item))output.accept(item.get());});
-            }).build());
+            .displayItems((parameters, output) -> NexusItems.ITEMS.getEntries().forEach(item -> {
+                if(NexusBlocks.BLOCKS.getEntries().stream().noneMatch(block -> item.getId().equals(block.getId()))) {
+                    output.accept(item.get());
+                }
+            })).build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> NEXUS_BLOCK_TAB = NEXUS_TABS.register("nexus_block_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.nexus_blocks"))
             .withTabsBefore(NEXUS_TAB.getId())

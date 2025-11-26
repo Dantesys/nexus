@@ -9,9 +9,13 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
@@ -74,6 +78,46 @@ public class NexusItemModelProvider extends ItemModelProvider {
         basicItem(NexusBlocks.METAL_DOOR.asItem());
         basicItem(NexusBlocks.NATUREZA_DOOR.asItem());
         basicItem(NexusBlocks.ROCHA_DOOR.asItem());
+        saplingItem(NexusBlocks.AGUA_SAPLING);
+        saplingItem(NexusBlocks.ELETRICO_SAPLING);
+        saplingItem(NexusBlocks.ESCURO_SAPLING);
+        saplingItem(NexusBlocks.FOGO_SAPLING);
+        saplingItem(NexusBlocks.LUZ_SAPLING);
+        saplingItem(NexusBlocks.METAL_SAPLING);
+        saplingItem(NexusBlocks.NATUREZA_SAPLING);
+        saplingItem(NexusBlocks.ROCHA_SAPLING);
+        buttonItem(NexusBlocks.AGUA_BUTTON, NexusBlocks.AGUA_PLANKS);
+        fenceItem(NexusBlocks.AGUA_FENCE, NexusBlocks.AGUA_PLANKS);
+        buttonItem(NexusBlocks.ELETRICO_BUTTON, NexusBlocks.ELETRICO_PLANKS);
+        fenceItem(NexusBlocks.ELETRICO_FENCE, NexusBlocks.ELETRICO_PLANKS);
+        buttonItem(NexusBlocks.ESCURO_BUTTON, NexusBlocks.ESCURO_PLANKS);
+        fenceItem(NexusBlocks.ESCURO_FENCE, NexusBlocks.ESCURO_PLANKS);
+        buttonItem(NexusBlocks.FOGO_BUTTON, NexusBlocks.FOGO_PLANKS);
+        fenceItem(NexusBlocks.FOGO_FENCE, NexusBlocks.FOGO_PLANKS);
+        buttonItem(NexusBlocks.LUZ_BUTTON, NexusBlocks.LUZ_PLANKS);
+        fenceItem(NexusBlocks.LUZ_FENCE, NexusBlocks.LUZ_PLANKS);
+        buttonItem(NexusBlocks.METAL_BUTTON, NexusBlocks.METAL_PLANKS);
+        fenceItem(NexusBlocks.METAL_FENCE, NexusBlocks.METAL_PLANKS);
+        buttonItem(NexusBlocks.NATUREZA_BUTTON, NexusBlocks.NATUREZA_PLANKS);
+        fenceItem(NexusBlocks.NATUREZA_FENCE, NexusBlocks.NATUREZA_PLANKS);
+        buttonItem(NexusBlocks.ROCHA_BUTTON, NexusBlocks.ROCHA_PLANKS);
+        fenceItem(NexusBlocks.ROCHA_FENCE, NexusBlocks.ROCHA_PLANKS);
+    }
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(Nexus.MODID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(Nexus.MODID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+    private ItemModelBuilder saplingItem(DeferredBlock<SaplingBlock> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"block/" + item.getId().getPath()));
     }
     private void generateFragmentoModel(Item item, String textureName) {
         getBuilder(BuiltInRegistries.ITEM.getKey(item).getPath())

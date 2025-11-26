@@ -208,6 +208,38 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_rocha", has(NexusBlocks.ROCHA_PLANKS.get())).save(recipeOutput);
         trapdoorBuilder(NexusBlocks.ROCHA_TRAPDOOR.get(), Ingredient.of(NexusBlocks.ROCHA_PLANKS.get())).group("rocha")
                 .unlockedBy("has_rocha", has(NexusBlocks.ROCHA_PLANKS.get())).save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.AGUA_PLANKS.get(), 4)
+                .requires(NexusBlocks.AGUA_LOG)
+                .unlockedBy("has_agua_log", has(NexusBlocks.AGUA_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ELETRICO_PLANKS.get(), 4)
+                .requires(NexusBlocks.ELETRICO_LOG)
+                .unlockedBy("has_eletrico_log", has(NexusBlocks.ELETRICO_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ESCURO_PLANKS.get(), 4)
+                .requires(NexusBlocks.ESCURO_LOG)
+                .unlockedBy("has_escuro_log", has(NexusBlocks.ESCURO_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.LUZ_PLANKS.get(), 4)
+                .requires(NexusBlocks.LUZ_LOG)
+                .unlockedBy("has_luz_log", has(NexusBlocks.LUZ_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.FOGO_PLANKS.get(), 4)
+                .requires(NexusBlocks.FOGO_LOG)
+                .unlockedBy("has_fogo_log", has(NexusBlocks.FOGO_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.METAL_PLANKS.get(), 4)
+                .requires(NexusBlocks.METAL_LOG)
+                .unlockedBy("has_metal_log", has(NexusBlocks.METAL_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.NATUREZA_PLANKS.get(), 4)
+                .requires(NexusBlocks.NATUREZA_LOG)
+                .unlockedBy("has_natureza_log", has(NexusBlocks.NATUREZA_LOG.get()))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ROCHA_PLANKS.get(), 4)
+                .requires(NexusBlocks.ROCHA_LOG)
+                .unlockedBy("has_rocha_log", has(NexusBlocks.ROCHA_LOG.get()))
+                .save(recipeOutput);
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {

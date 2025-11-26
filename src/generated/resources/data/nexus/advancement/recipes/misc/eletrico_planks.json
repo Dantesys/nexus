@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_eletrico_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:eletrico_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:eletrico_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_eletrico_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:eletrico_planks"
+    ]
+  }
+}

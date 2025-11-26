@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rocha_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:rocha_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:rocha_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rocha_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:rocha_planks"
+    ]
+  }
+}

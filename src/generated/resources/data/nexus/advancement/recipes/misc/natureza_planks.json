@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_natureza_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:natureza_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:natureza_planks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_natureza_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:natureza_planks"
+    ]
+  }
+}

@@ -35,7 +35,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.AGUA_SLAB);
         blockItem(NexusBlocks.AGUA_PRESSURE_PLATE);
         blockItem(NexusBlocks.AGUA_FENCE_GATE);
-        blockItem(NexusBlocks.AGUA_TRAPDOOR);
+        blockItem(NexusBlocks.AGUA_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.AGUA_LOG.get());
         logBlock(NexusBlocks.STRIPPED_AGUA_LOG.get());
         blockItem(NexusBlocks.AGUA_LOG);
@@ -56,7 +56,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.ELETRICO_SLAB);
         blockItem(NexusBlocks.ELETRICO_PRESSURE_PLATE);
         blockItem(NexusBlocks.ELETRICO_FENCE_GATE);
-        blockItem(NexusBlocks.ELETRICO_TRAPDOOR);
+        blockItem(NexusBlocks.ELETRICO_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.ELETRICO_LOG.get());
         logBlock(NexusBlocks.STRIPPED_ELETRICO_LOG.get());
         blockItem(NexusBlocks.ELETRICO_LOG);
@@ -77,7 +77,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.ESCURO_SLAB);
         blockItem(NexusBlocks.ESCURO_PRESSURE_PLATE);
         blockItem(NexusBlocks.ESCURO_FENCE_GATE);
-        blockItem(NexusBlocks.ESCURO_TRAPDOOR);
+        blockItem(NexusBlocks.ESCURO_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.ESCURO_LOG.get());
         logBlock(NexusBlocks.STRIPPED_ESCURO_LOG.get());
         blockItem(NexusBlocks.ESCURO_LOG);
@@ -98,7 +98,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.FOGO_SLAB);
         blockItem(NexusBlocks.FOGO_PRESSURE_PLATE);
         blockItem(NexusBlocks.FOGO_FENCE_GATE);
-        blockItem(NexusBlocks.FOGO_TRAPDOOR);
+        blockItem(NexusBlocks.FOGO_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.FOGO_LOG.get());
         logBlock(NexusBlocks.STRIPPED_FOGO_LOG.get());
         blockItem(NexusBlocks.FOGO_LOG);
@@ -119,7 +119,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.LUZ_SLAB);
         blockItem(NexusBlocks.LUZ_PRESSURE_PLATE);
         blockItem(NexusBlocks.LUZ_FENCE_GATE);
-        blockItem(NexusBlocks.LUZ_TRAPDOOR);
+        blockItem(NexusBlocks.LUZ_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.LUZ_LOG.get());
         logBlock(NexusBlocks.STRIPPED_LUZ_LOG.get());
         blockItem(NexusBlocks.LUZ_LOG);
@@ -140,7 +140,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.METAL_SLAB);
         blockItem(NexusBlocks.METAL_PRESSURE_PLATE);
         blockItem(NexusBlocks.METAL_FENCE_GATE);
-        blockItem(NexusBlocks.METAL_TRAPDOOR);
+        blockItem(NexusBlocks.METAL_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.METAL_LOG.get());
         logBlock(NexusBlocks.STRIPPED_METAL_LOG.get());
         blockItem(NexusBlocks.METAL_LOG);
@@ -161,7 +161,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.NATUREZA_SLAB);
         blockItem(NexusBlocks.NATUREZA_PRESSURE_PLATE);
         blockItem(NexusBlocks.NATUREZA_FENCE_GATE);
-        blockItem(NexusBlocks.NATUREZA_TRAPDOOR);
+        blockItem(NexusBlocks.NATUREZA_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.NATUREZA_LOG.get());
         logBlock(NexusBlocks.STRIPPED_NATUREZA_LOG.get());
         blockItem(NexusBlocks.NATUREZA_LOG);
@@ -182,7 +182,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
         blockItem(NexusBlocks.ROCHA_SLAB);
         blockItem(NexusBlocks.ROCHA_PRESSURE_PLATE);
         blockItem(NexusBlocks.ROCHA_FENCE_GATE);
-        blockItem(NexusBlocks.ROCHA_TRAPDOOR);
+        blockItem(NexusBlocks.ROCHA_TRAPDOOR,"_bottom");
         logBlock(NexusBlocks.ROCHA_LOG.get());
         logBlock(NexusBlocks.STRIPPED_ROCHA_LOG.get());
         blockItem(NexusBlocks.ROCHA_LOG);
@@ -205,5 +205,8 @@ public class NexusBlockStateProvider extends BlockStateProvider {
     }
     private void blockItem(DeferredBlock<?> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(Nexus.MODID+":block/" + deferredBlock.getId().getPath()));
+    }
+    private void blockItem(DeferredBlock<?> deferredBlock,String addition) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile(Nexus.MODID+":block/" + deferredBlock.getId().getPath()+addition));
     }
 }

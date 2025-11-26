@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nexus:eletrico_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "nexus:eletrico_planks"
+  }
+}
