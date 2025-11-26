@@ -5,8 +5,6 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.util.valueproviders.IntProvider;
-import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -32,52 +30,52 @@ public class NexusConfiguratedFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, AGUA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.AGUA_LOG.get()),
-                new FancyTrunkPlacer(4, 4, 3),
+                new BendingTrunkPlacer(5, 3, 2, 2, ConstantInt.of(2)),
                 BlockStateProvider.simple(NexusBlocks.AGUA_LEAVES.get()),
-                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), 4),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, ELETRICO_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.ELETRICO_LOG.get()),
-                new ForkingTrunkPlacer(5, 2, 5),
+                new ForkingTrunkPlacer(6, 3, 5),
                 BlockStateProvider.simple(NexusBlocks.ELETRICO_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
-                new TwoLayersFeatureSize(1, 1, 2)).build());
+                new FancyFoliagePlacer(ConstantInt.of(1), ConstantInt.of(4), 5),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, ESCURO_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.ESCURO_LOG.get()),
-                new DarkOakTrunkPlacer(4, 4, 3),
+                new FancyTrunkPlacer(6, 3, 4),
                 BlockStateProvider.simple(NexusBlocks.ESCURO_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+                new FancyFoliagePlacer(ConstantInt.of(3), ConstantInt.of(4), 4),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, FOGO_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.FOGO_LOG.get()),
-                new StraightTrunkPlacer(5, 4, 3),
+                new StraightTrunkPlacer(7, 3, 2),
                 BlockStateProvider.simple(NexusBlocks.FOGO_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(5), 3),
+                new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(5), 5),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, LUZ_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.LUZ_LOG.get()),
-                new GiantTrunkPlacer(10, 5, 9),
+                new GiantTrunkPlacer(12, 6, 10),
                 BlockStateProvider.simple(NexusBlocks.LUZ_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(8), ConstantInt.of(9), 9),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new BlobFoliagePlacer(ConstantInt.of(8), ConstantInt.of(5), 10),
+                new TwoLayersFeatureSize(2, 0, 3)).build());
         register(context, METAL_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.METAL_LOG.get()),
-                new BendingTrunkPlacer(4, 4, 3,2,ConstantInt.of(2)),
+                new BendingTrunkPlacer(5, 1, 1, 1, ConstantInt.of(1)),
                 BlockStateProvider.simple(NexusBlocks.METAL_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
-                new TwoLayersFeatureSize(2, 0, 3)).build());
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 3),
+                new TwoLayersFeatureSize(2, 1, 2)).build());
         register(context, NATUREZA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.NATUREZA_LOG.get()),
-                new MegaJungleTrunkPlacer(10, 8, 6),
+                new MegaJungleTrunkPlacer(12, 10, 10),
                 BlockStateProvider.simple(NexusBlocks.NATUREZA_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+                new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 8),
                 new TwoLayersFeatureSize(1, 0, 2)).build());
         register(context, ROCHA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.ROCHA_LOG.get()),
-                new ForkingTrunkPlacer(3, 3, 2),
+                new ForkingTrunkPlacer(3, 1, 1),
                 BlockStateProvider.simple(NexusBlocks.ROCHA_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 2),
+                new TwoLayersFeatureSize(1, 0, 1)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
