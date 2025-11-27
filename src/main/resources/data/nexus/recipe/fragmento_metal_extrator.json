@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:metal_logs"},
+  "result": {
+    "id": "nexus:fragmento_metal",
+    "count": 4
+  }
+}

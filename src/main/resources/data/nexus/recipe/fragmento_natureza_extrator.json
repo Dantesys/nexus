@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:natureza_logs"},
+  "result": {
+    "id": "nexus:fragmento_natureza",
+    "count": 4
+  }
+}

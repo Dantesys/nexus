@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "tag": "nexus:esmeralda_elemental"
+    },
+    "F": {
+      "item": "nexus:aco"
+    },
+    "N": {
+      "item": "nexus:nucleo"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "E E",
+    "FNF",
+    "FOF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:extrator"
+  }
+}

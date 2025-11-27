@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:fogo_log"
+            "items": "#nexus:fogo_logs"
           }
         ]
       },

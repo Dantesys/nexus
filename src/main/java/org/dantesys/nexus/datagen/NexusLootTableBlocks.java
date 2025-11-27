@@ -4,7 +4,12 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import org.dantesys.nexus.blocks.NexusBlocks;
+import org.dantesys.nexus.items.NexusItems;
 
 import java.util.Set;
 
@@ -24,6 +29,7 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(NexusBlocks.INFUSOR.get());
+        dropSelf(NexusBlocks.EXTRATOR.get());
         dropSelf(NexusBlocks.ACO_BLOCK.get());
         //Agua
         dropSelf(NexusBlocks.AGUA_STAIRS.get());
@@ -41,7 +47,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.AGUA_PLANKS.get());
         dropSelf(NexusBlocks.AGUA_SAPLING.get());
         add(NexusBlocks.AGUA_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.AGUA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.AGUA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1))
+                        .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_AGUA.get())
+                                .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                        )
+                ));
         //Eletrico
         dropSelf(NexusBlocks.ELETRICO_STAIRS.get());
         add(NexusBlocks.ELETRICO_SLAB.get(),
@@ -58,7 +70,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.ELETRICO_PLANKS.get());
         dropSelf(NexusBlocks.ELETRICO_SAPLING.get());
         add(NexusBlocks.ELETRICO_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.ELETRICO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.ELETRICO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_ELETRICO.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Escuro
         dropSelf(NexusBlocks.ESCURO_STAIRS.get());
         add(NexusBlocks.ESCURO_SLAB.get(),
@@ -75,7 +93,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.ESCURO_PLANKS.get());
         dropSelf(NexusBlocks.ESCURO_SAPLING.get());
         add(NexusBlocks.ESCURO_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.ESCURO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.ESCURO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_ESCURO.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Fogo
         dropSelf(NexusBlocks.FOGO_STAIRS.get());
         add(NexusBlocks.FOGO_SLAB.get(),
@@ -92,7 +116,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.FOGO_PLANKS.get());
         dropSelf(NexusBlocks.FOGO_SAPLING.get());
         add(NexusBlocks.FOGO_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.FOGO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.FOGO_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_FOGO.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Luz
         dropSelf(NexusBlocks.LUZ_STAIRS.get());
         add(NexusBlocks.LUZ_SLAB.get(),
@@ -109,7 +139,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.LUZ_PLANKS.get());
         dropSelf(NexusBlocks.LUZ_SAPLING.get());
         add(NexusBlocks.LUZ_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.LUZ_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.LUZ_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_LUZ.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Metal
         dropSelf(NexusBlocks.METAL_STAIRS.get());
         add(NexusBlocks.METAL_SLAB.get(),
@@ -126,7 +162,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.METAL_PLANKS.get());
         dropSelf(NexusBlocks.METAL_SAPLING.get());
         add(NexusBlocks.METAL_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.METAL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.METAL_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_METAL.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Natureza
         dropSelf(NexusBlocks.NATUREZA_STAIRS.get());
         add(NexusBlocks.NATUREZA_SLAB.get(),
@@ -143,7 +185,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.NATUREZA_PLANKS.get());
         dropSelf(NexusBlocks.NATUREZA_SAPLING.get());
         add(NexusBlocks.NATUREZA_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.NATUREZA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.NATUREZA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_NATUREZA.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         //Rocha
         dropSelf(NexusBlocks.ROCHA_STAIRS.get());
         add(NexusBlocks.ROCHA_SLAB.get(),
@@ -160,7 +208,13 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.ROCHA_PLANKS.get());
         dropSelf(NexusBlocks.ROCHA_SAPLING.get());
         add(NexusBlocks.ROCHA_LEAVES.get(), block ->
-                createLeavesDrops(block, NexusBlocks.ROCHA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDrops(block, NexusBlocks.ROCHA_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES)
+                        .withPool(LootPool.lootPool()
+                                .setRolls(ConstantValue.exactly(1))
+                                .add(LootItem.lootTableItem(NexusItems.FRAGMENTO_ROCHA.get())
+                                        .when(LootItemRandomChanceCondition.randomChance(0.05f))
+                                )
+                        ));
         
     }
 }

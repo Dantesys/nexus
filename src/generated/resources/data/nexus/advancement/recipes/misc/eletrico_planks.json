@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:eletrico_log"
+            "items": "#nexus:eletrico_logs"
           }
         ]
       },

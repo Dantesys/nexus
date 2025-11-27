@@ -18,7 +18,14 @@ public class NexusTags {
     }
     public static class Items {
         public static final TagKey<Item> EMERALD_ELEMENTAL = createTag("esmeralda_elemental");
-
+        public static final TagKey<Item> AGUA_LOGS = createTag("agua_logs");
+        public static final TagKey<Item> ELETRICO_LOGS = createTag("eletrico_logs");
+        public static final TagKey<Item> ESCURO_LOGS = createTag("escuro_logs");
+        public static final TagKey<Item> FOGO_LOGS = createTag("fogo_logs");
+        public static final TagKey<Item> LUZ_LOGS = createTag("luz_logs");
+        public static final TagKey<Item> METAL_LOGS = createTag("metal_logs");
+        public static final TagKey<Item> NATUREZA_LOGS = createTag("natureza_logs");
+        public static final TagKey<Item> ROCHA_LOGS = createTag("rocha_logs");
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Nexus.MODID, name));
         }

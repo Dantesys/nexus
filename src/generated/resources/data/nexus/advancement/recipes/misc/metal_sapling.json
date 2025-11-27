@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_metal_fragmento": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:fragmento_metal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:metal_sapling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_metal_fragmento"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:metal_sapling"
+    ]
+  }
+}

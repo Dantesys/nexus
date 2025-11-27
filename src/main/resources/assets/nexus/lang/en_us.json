@@ -27,6 +27,7 @@
   "item.nexus.aco_leggings": "Elemental Steel Leggings",
   "item.nexus.aco_boots": "Elemental Steel Boots",
   "block.nexus.infusor": "Elemental Infuser",
+  "block.nexus.extrator": "Elemental Extractor",
   "block.nexus.aco_block" : "Elemental Steel Block",
   "block.nexus.agua_leaves": "Marine Leaf",
   "block.nexus.agua_log": "Marine Log",
@@ -133,6 +134,7 @@
   "block.nexus.rocha_stairs": "Granitic Stairs",
   "block.nexus.rocha_pressure_plate": "Granitic Pressure Plate",
   "container.nexus.infusor": "Elemental Infuser",
+  "container.nexus.extrator": "Elemental Extractor",
   "itemGroup.nexus_itens": "Nexus Elemental - Items",
   "itemGroup.nexus_blocks": "Nexus Elemental - Blocks"
 }

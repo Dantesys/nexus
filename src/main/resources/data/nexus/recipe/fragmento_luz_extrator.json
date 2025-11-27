@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:luz_logs"},
+  "result": {
+    "id": "nexus:fragmento_luz",
+    "count": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:river",
+    "minecraft:swamp"
+  ],
+  "features": "nexus:agua_placed",
+  "step": "vegetal_decoration"
+}

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:escuro_log"
+            "items": "#nexus:escuro_logs"
           }
         ]
       },

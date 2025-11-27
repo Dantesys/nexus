@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:eletrico_logs"},
+  "result": {
+    "id": "nexus:fragmento_eletrico",
+    "count": 4
+  }
+}

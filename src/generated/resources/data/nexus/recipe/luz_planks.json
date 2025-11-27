@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:luz_log"
+      "tag": "nexus:luz_logs"
     }
   ],
   "result": {

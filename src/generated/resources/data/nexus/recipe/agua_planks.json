@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:agua_log"
+      "tag": "nexus:agua_logs"
     }
   ],
   "result": {

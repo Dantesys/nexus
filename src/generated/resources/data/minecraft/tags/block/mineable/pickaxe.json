@@ -1,5 +1,6 @@
 {
   "values": [
-    "nexus:infusor"
+    "nexus:infusor",
+    "nexus:extrator"
   ]
 }

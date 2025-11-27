@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:agua_log"
+            "items": "#nexus:agua_logs"
           }
         ]
       },

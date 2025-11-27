@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:fogo_log"
+      "tag": "nexus:fogo_logs"
     }
   ],
   "result": {

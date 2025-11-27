@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:metal_log"
+            "items": "#nexus:metal_logs"
           }
         ]
       },

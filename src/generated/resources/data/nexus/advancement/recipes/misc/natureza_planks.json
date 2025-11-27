@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:natureza_log"
+            "items": "#nexus:natureza_logs"
           }
         ]
       },

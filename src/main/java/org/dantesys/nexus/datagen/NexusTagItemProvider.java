@@ -67,5 +67,38 @@ public class NexusTagItemProvider extends ItemTagsProvider {
                 .add(NexusBlocks.METAL_PLANKS.asItem())
                 .add(NexusBlocks.NATUREZA_PLANKS.asItem())
                 .add(NexusBlocks.ROCHA_PLANKS.asItem());
+        tag(ItemTags.SAPLINGS)
+                .add(NexusBlocks.AGUA_SAPLING.asItem())
+                .add(NexusBlocks.ELETRICO_SAPLING.asItem())
+                .add(NexusBlocks.ESCURO_SAPLING.asItem())
+                .add(NexusBlocks.FOGO_SAPLING.asItem())
+                .add(NexusBlocks.LUZ_SAPLING.asItem())
+                .add(NexusBlocks.METAL_SAPLING.asItem())
+                .add(NexusBlocks.NATUREZA_SAPLING.asItem())
+                .add(NexusBlocks.ROCHA_SAPLING.asItem());
+        tag(NexusTags.Items.AGUA_LOGS)
+                .add(NexusBlocks.AGUA_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_AGUA_LOG.get().asItem());
+        tag(NexusTags.Items.ELETRICO_LOGS)
+                .add(NexusBlocks.ELETRICO_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_ELETRICO_LOG.get().asItem());
+        tag(NexusTags.Items.ESCURO_LOGS)
+                .add(NexusBlocks.ESCURO_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_ESCURO_LOG.get().asItem());
+        tag(NexusTags.Items.FOGO_LOGS)
+                .add(NexusBlocks.FOGO_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_FOGO_LOG.get().asItem());
+        tag(NexusTags.Items.LUZ_LOGS)
+                .add(NexusBlocks.LUZ_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_LUZ_LOG.get().asItem());
+        tag(NexusTags.Items.METAL_LOGS)
+                .add(NexusBlocks.METAL_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_METAL_LOG.get().asItem());
+        tag(NexusTags.Items.NATUREZA_LOGS)
+                .add(NexusBlocks.NATUREZA_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_NATUREZA_LOG.get().asItem());
+        tag(NexusTags.Items.ROCHA_LOGS)
+                .add(NexusBlocks.ROCHA_LOG.get().asItem())
+                .add(NexusBlocks.STRIPPED_ROCHA_LOG.get().asItem());
     }
 }

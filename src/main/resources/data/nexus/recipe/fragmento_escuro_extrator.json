@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:escuro_logs"},
+  "result": {
+    "id": "nexus:fragmento_escuro",
+    "count": 4
+  }
+}

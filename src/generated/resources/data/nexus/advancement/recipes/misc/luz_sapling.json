@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_luz_fragmento": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:fragmento_luz"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:luz_sapling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_luz_fragmento"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:luz_sapling"
+    ]
+  }
+}

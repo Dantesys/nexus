@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:metal_log"
+      "tag": "nexus:metal_logs"
     }
   ],
   "result": {

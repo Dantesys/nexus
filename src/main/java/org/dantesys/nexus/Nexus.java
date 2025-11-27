@@ -17,15 +17,18 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.dantesys.nexus.blocks.NexusBlocks;
+import org.dantesys.nexus.blocks.entity.ExtratorBlockEntityRenderer;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntityRenderer;
 import org.dantesys.nexus.datagen.NexusDatagen;
 import org.dantesys.nexus.gui.NexusMenus;
+import org.dantesys.nexus.gui.screen.ExtratorScreen;
 import org.dantesys.nexus.gui.screen.InfusorScreen;
 import org.dantesys.nexus.items.NexusCreativeTab;
 import org.dantesys.nexus.items.NexusItems;
 import org.dantesys.nexus.recipe.NexusRecipes;
 import org.slf4j.Logger;
 
+import static org.dantesys.nexus.gui.NexusMenus.EXTRATOR_MENU;
 import static org.dantesys.nexus.gui.NexusMenus.INFUSOR_MENU;
 
 
@@ -81,10 +84,12 @@ public class Nexus
         @SubscribeEvent // on the mod event bus only on the physical client
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(INFUSOR_MENU.get(), InfusorScreen::new);
+            event.register(EXTRATOR_MENU.get(), ExtratorScreen::new);
         }
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(NexusBlocks.INFUSOR_BE.get(), InfusorBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(NexusBlocks.EXTRATOR_BE.get(), ExtratorBlockEntityRenderer::new);
         }
     }
 }

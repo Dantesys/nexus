@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:escuro_log"
+      "tag": "nexus:escuro_logs"
     }
   ],
   "result": {

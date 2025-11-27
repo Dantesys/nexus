@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "nexus:luz_log"
+            "items": "#nexus:luz_logs"
           }
         ]
       },

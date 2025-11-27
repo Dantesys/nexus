@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_escuro_fragmento": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nexus:fragmento_escuro"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nexus:escuro_sapling"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_escuro_fragmento"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nexus:escuro_sapling"
+    ]
+  }
+}

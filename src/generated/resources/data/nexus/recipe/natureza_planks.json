@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:natureza_log"
+      "tag": "nexus:natureza_logs"
     }
   ],
   "result": {

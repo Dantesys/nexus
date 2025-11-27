@@ -27,6 +27,7 @@
   "item.nexus.aco_leggings": "Calça de Aço Elemental",
   "item.nexus.aco_boots": "Botas de Aço Elemental",
   "block.nexus.infusor": "Infusor Elemental",
+  "block.nexus.extrator": "Extrator Elemental",
   "block.nexus.aco_block": "Bloco de Aço Elemental",
   "block.nexus.agua_leaves": "Folha de Marinha",
   "block.nexus.agua_slab": "Laje de Marinha",
@@ -133,6 +134,7 @@
   "block.nexus.rocha_stairs": "Escada Granítica",
   "block.nexus.rocha_pressure_plate": "Placa de pressão Granítica",
   "container.nexus.infusor": "Infusor Elemental",
+  "container.nexus.extrator": "Extrator Elemental",
   "itemGroup.nexus_itens": "Nexus Elemental - Itens",
   "itemGroup.nexus_blocks": "Nexus Elemental - Blocos"
 }

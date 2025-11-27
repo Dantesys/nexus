@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.dantesys.nexus.blocks.entity.ExtratorBlockEntity;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
 import org.dantesys.nexus.worldgen.tree.NexusTreeGrowers;
 import org.dantesys.nexus.items.NexusItems;
@@ -24,6 +25,8 @@ public class NexusBlocks {
     //Block
     public static final DeferredBlock<InfusorBlock> INFUSOR = registerBlock("infusor",
             () -> new InfusorBlock(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<ExtratorBlock> EXTRATOR = registerBlock("extrator",
+            () -> new ExtratorBlock(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<Block> ACO_BLOCK = registerBlock("aco_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
     //Madeiras
@@ -248,6 +251,10 @@ public class NexusBlocks {
             BLOCK_ENTITIES.register("infusor",
                     () -> BlockEntityType.Builder.of(InfusorBlockEntity::new,INFUSOR.get())
                     .build(null));
+    public static final Supplier<BlockEntityType<ExtratorBlockEntity>> EXTRATOR_BE =
+            BLOCK_ENTITIES.register("extrator",
+                    () -> BlockEntityType.Builder.of(ExtratorBlockEntity::new,EXTRATOR.get())
+                            .build(null));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

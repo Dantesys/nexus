@@ -1,10 +1,10 @@
-// 1.21.1	2025-11-25T17:02:15.188138	Loot Tables
+// 1.21.1	2025-11-26T20:11:46.9772535	Loot Tables
 96d45f5e79cb1e79e6e4a50d47a06e876720c617 data/nexus/loot_table/blocks/aco_block.json
 64192645fe3ffcaf71bea07d39561aa3b22b6f47 data/nexus/loot_table/blocks/agua_button.json
 c885f26bc42cfabf836cef3595325e3266b793d5 data/nexus/loot_table/blocks/agua_door.json
 d53f75d895726f5d56354f311907075f3b0c0007 data/nexus/loot_table/blocks/agua_fence.json
 3566c8d243c958afaff3086a35ac2a2206fb2432 data/nexus/loot_table/blocks/agua_fence_gate.json
-ddea8bb526916e339e4f0e85526f62beefa7456c data/nexus/loot_table/blocks/agua_leaves.json
+535f468cf746ab0a4f65b28e5980b0e9a510dc15 data/nexus/loot_table/blocks/agua_leaves.json
 6b57741f482ac3a887d21e619e127b27b1511717 data/nexus/loot_table/blocks/agua_log.json
 36be3ab4a5e001d14885835cdad17c906cee9c5b data/nexus/loot_table/blocks/agua_planks.json
 be97d12f8bd3b6423bf422455f738155ed215e58 data/nexus/loot_table/blocks/agua_pressure_plate.json
@@ -16,7 +16,7 @@ d9b139a3a78371282b49b35294918f0d8891c06c data/nexus/loot_table/blocks/eletrico_b
 6a493d528fc1a8ea2cd4c6da9a5594a881c64868 data/nexus/loot_table/blocks/eletrico_door.json
 f0d2a50cb4996c322964c2d6347662a0738dabea data/nexus/loot_table/blocks/eletrico_fence.json
 060b39809cfc72e18fbf1758cf7dd6e6b072a9b0 data/nexus/loot_table/blocks/eletrico_fence_gate.json
-5be25d6fc209a623e000b9f484927fe204c797cb data/nexus/loot_table/blocks/eletrico_leaves.json
+08841980df07a6e6628b80b7f9566ffbbe55619b data/nexus/loot_table/blocks/eletrico_leaves.json
 a1d4f69b4f7ae8f86bc31c48240dde948fac7d43 data/nexus/loot_table/blocks/eletrico_log.json
 8524629f78f04a4ceda72cf2d16b06948d5e9cea data/nexus/loot_table/blocks/eletrico_planks.json
 8f2c1df358789fd63abfbf460754b02bc060006d data/nexus/loot_table/blocks/eletrico_pressure_plate.json
@@ -28,7 +28,7 @@ d9512909a7efd6823056fd69a376f2b4761a8591 data/nexus/loot_table/blocks/eletrico_s
 ef3027f594c1f4a4cfb6b2fb46813b25bea8ffa1 data/nexus/loot_table/blocks/escuro_door.json
 270d59f2dcd3e73ca5d31b895602460de1abf7a0 data/nexus/loot_table/blocks/escuro_fence.json
 e2a434db45ec76b271ab342b7fe2d319615459dd data/nexus/loot_table/blocks/escuro_fence_gate.json
-2eb7a011e057910bd09768a1e51df37563873853 data/nexus/loot_table/blocks/escuro_leaves.json
+3d9ad4873f447cae9369153996cc4f3805564d27 data/nexus/loot_table/blocks/escuro_leaves.json
 2aee8b4dac1a1917c80dae26c2eb3c851cdba8ea data/nexus/loot_table/blocks/escuro_log.json
 6bf89b41b8488941783c1b637e4729e9ba62f1ad data/nexus/loot_table/blocks/escuro_planks.json
 74423620a5b7bd2852cb5ca6e70a91390be1d061 data/nexus/loot_table/blocks/escuro_pressure_plate.json
@@ -36,11 +36,12 @@ e2a434db45ec76b271ab342b7fe2d319615459dd data/nexus/loot_table/blocks/escuro_fen
 7ac00a7a4cd22a47df30a5c8738e19faeb99c68c data/nexus/loot_table/blocks/escuro_slab.json
 d3dcbc4ab8dc1e1546c9c83c06dbcf0127021fa3 data/nexus/loot_table/blocks/escuro_stairs.json
 f066b63922960eacbfea1928d55a0aace192a35b data/nexus/loot_table/blocks/escuro_trapdoor.json
+a5f820078df4d154f42d08430192e41bd0f828c3 data/nexus/loot_table/blocks/extrator.json
 edb1cf8e74dde550040398a6280ee4818e2a872d data/nexus/loot_table/blocks/fogo_button.json
 6f7d1a172c56e49e65c1b1dfefa644570a21239e data/nexus/loot_table/blocks/fogo_door.json
 141b701d0a18f56c5ba2ccfb4fa5823ba0ded493 data/nexus/loot_table/blocks/fogo_fence.json
 9a823f2fcfa7b84fddaa749d537c496177ebfd12 data/nexus/loot_table/blocks/fogo_fence_gate.json
-388a04a08ea45da2c0d4683fe026a944a47c607a data/nexus/loot_table/blocks/fogo_leaves.json
+1a88d5d50132603b6d1c7154f7663ef8204fcbdc data/nexus/loot_table/blocks/fogo_leaves.json
 a6dd4a63507a4739e4a9be7afc5a869b14f4e47f data/nexus/loot_table/blocks/fogo_log.json
 41751af360f86a76de2c752d84eb8aacbae3c829 data/nexus/loot_table/blocks/fogo_planks.json
 0cad6c8556cfbbf1315e5b024d86886487c7c4d1 data/nexus/loot_table/blocks/fogo_pressure_plate.json
@@ -53,7 +54,7 @@ a344ac4026f3e784ad0ce8cab7aa6cd59cf30600 data/nexus/loot_table/blocks/luz_button
 56fb10be9136bc5fdc23edf17dd30080e6484d1d data/nexus/loot_table/blocks/luz_door.json
 7a820b050203f27fb1c1449f729b2465d86bbcd8 data/nexus/loot_table/blocks/luz_fence.json
 4b24f708ae798316b74d9094baf45d5b19d3be96 data/nexus/loot_table/blocks/luz_fence_gate.json
-0cd7760aafca8cc02f00c66c39920ab25ff515a1 data/nexus/loot_table/blocks/luz_leaves.json
+1be0eb7b98aed5d35adf9d0b0fd0dd3f4b26caa8 data/nexus/loot_table/blocks/luz_leaves.json
 a8caa23eb40fd9e1ba584f5de815b1217643a12e data/nexus/loot_table/blocks/luz_log.json
 caa82daaf28ce891cda3e62a1bbb17f04c66e61e data/nexus/loot_table/blocks/luz_planks.json
 6b0730ebcb80d34e3dfbb3ae14d3282587aa16d2 data/nexus/loot_table/blocks/luz_pressure_plate.json
@@ -65,7 +66,7 @@ dce2151eea6c5a5b5b1d95f5db0353f82c74ac79 data/nexus/loot_table/blocks/luz_slab.j
 b725f2abd0690e8216db7f28f13c832c120f0f94 data/nexus/loot_table/blocks/metal_door.json
 3bf6fc3594e139ad8394e49b93630f73864eee5b data/nexus/loot_table/blocks/metal_fence.json
 51a486b1bdaf4ff06750e4966cb5684b03c6fb41 data/nexus/loot_table/blocks/metal_fence_gate.json
-34893fd7222b0b159d5ec8805d6de3dd226ca0f8 data/nexus/loot_table/blocks/metal_leaves.json
+8a7329d78ba0e59d5b3e78f38974cc92431cbe6c data/nexus/loot_table/blocks/metal_leaves.json
 aa76143522f31ead6cc964b40dd0875fe5459654 data/nexus/loot_table/blocks/metal_log.json
 f8ecdd27f9df6938a44b300693b92793faade1dc data/nexus/loot_table/blocks/metal_planks.json
 f6e02e0d23f34a88f3856f93dfa28d67ffc421f2 data/nexus/loot_table/blocks/metal_pressure_plate.json
@@ -77,7 +78,7 @@ b57ddf15ceb5bdba68b816a9a3e0f837e932f2a0 data/nexus/loot_table/blocks/natureza_b
 6b636dc8c2d14cab3ba24109041229b443647e24 data/nexus/loot_table/blocks/natureza_door.json
 a3de713d19e60ba36c947c12cbb137a83adf165c data/nexus/loot_table/blocks/natureza_fence.json
 7e045f7806b605d0556638fbb8dd11edd6782bb1 data/nexus/loot_table/blocks/natureza_fence_gate.json
-bb79e93330c1a34d1260c377f8f68fe4390de688 data/nexus/loot_table/blocks/natureza_leaves.json
+59d58cf5b742e47bc70f8644db201db19eb4bb24 data/nexus/loot_table/blocks/natureza_leaves.json
 b78c82aa3c6c40e17ddba2aedc75ac8986bd3738 data/nexus/loot_table/blocks/natureza_log.json
 541daf3ee1e51cbc9fcf92d6aa9df7d828a8aa80 data/nexus/loot_table/blocks/natureza_planks.json
 3620fda759c7509f2234afec3131859939054cf5 data/nexus/loot_table/blocks/natureza_pressure_plate.json
@@ -89,7 +90,7 @@ b78c82aa3c6c40e17ddba2aedc75ac8986bd3738 data/nexus/loot_table/blocks/natureza_l
 92b9280ee4b637f6a32bf435a9e938a6fd446975 data/nexus/loot_table/blocks/rocha_door.json
 f1e5cf63c191cad7a5e96ce0fc65990e420bc3ba data/nexus/loot_table/blocks/rocha_fence.json
 194bbc917e5d35ad2b3810a5281189df04fc19b8 data/nexus/loot_table/blocks/rocha_fence_gate.json
-07895cd6a6d378ff8f77c8d664b0603b8b02be74 data/nexus/loot_table/blocks/rocha_leaves.json
+43058aad63750d740a330f07688659e98a046e4e data/nexus/loot_table/blocks/rocha_leaves.json
 c755eea4ecb4ee67600d6e3487cded35e595d14f data/nexus/loot_table/blocks/rocha_log.json
 2dca7ad0f7f17a7ecd61996a72b64a39ec95b3da data/nexus/loot_table/blocks/rocha_planks.json
 d3b9cac0775bb755d56435fb1d3b6a269c6872c3 data/nexus/loot_table/blocks/rocha_pressure_plate.json

@@ -4,9 +4,11 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.neoforged.neoforge.common.Tags;
 import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.items.NexusItems;
@@ -38,6 +40,14 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('E', NexusTags.Items.EMERALD_ELEMENTAL)
                 .unlockedBy("has_esmerald_elemental", has(NexusTags.Items.EMERALD_ELEMENTAL))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"infusor"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.EXTRATOR.get())
+                .pattern("E E").pattern("FNF").pattern("FOF")
+                .define('F',NexusItems.ACO.get())
+                .define('O',Items.OBSIDIAN)
+                .define('E', NexusTags.Items.EMERALD_ELEMENTAL)
+                .define('N', NexusItems.NUCLEO.get())
+                .unlockedBy("has_nucleo", has(NexusItems.NUCLEO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"extrator"));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.ACO_BLOCK.get())
                 .pattern("EEE").pattern("EEE").pattern("EEE")
                 .define('E', NexusItems.ACO.get())
@@ -209,37 +219,46 @@ public class NexusRecipeProvider extends RecipeProvider {
         trapdoorBuilder(NexusBlocks.ROCHA_TRAPDOOR.get(), Ingredient.of(NexusBlocks.ROCHA_PLANKS.get())).group("rocha")
                 .unlockedBy("has_rocha", has(NexusBlocks.ROCHA_PLANKS.get())).save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.AGUA_PLANKS.get(), 4)
-                .requires(NexusBlocks.AGUA_LOG)
-                .unlockedBy("has_agua_log", has(NexusBlocks.AGUA_LOG.get()))
+                .requires(NexusTags.Items.AGUA_LOGS)
+                .unlockedBy("has_agua_log", has(NexusTags.Items.AGUA_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ELETRICO_PLANKS.get(), 4)
-                .requires(NexusBlocks.ELETRICO_LOG)
-                .unlockedBy("has_eletrico_log", has(NexusBlocks.ELETRICO_LOG.get()))
+                .requires(NexusTags.Items.ELETRICO_LOGS)
+                .unlockedBy("has_eletrico_log", has(NexusTags.Items.ELETRICO_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ESCURO_PLANKS.get(), 4)
-                .requires(NexusBlocks.ESCURO_LOG)
-                .unlockedBy("has_escuro_log", has(NexusBlocks.ESCURO_LOG.get()))
+                .requires(NexusTags.Items.ESCURO_LOGS)
+                .unlockedBy("has_escuro_log", has(NexusTags.Items.ESCURO_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.LUZ_PLANKS.get(), 4)
-                .requires(NexusBlocks.LUZ_LOG)
-                .unlockedBy("has_luz_log", has(NexusBlocks.LUZ_LOG.get()))
+                .requires(NexusTags.Items.LUZ_LOGS)
+                .unlockedBy("has_luz_log", has(NexusTags.Items.LUZ_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.FOGO_PLANKS.get(), 4)
-                .requires(NexusBlocks.FOGO_LOG)
-                .unlockedBy("has_fogo_log", has(NexusBlocks.FOGO_LOG.get()))
+                .requires(NexusTags.Items.FOGO_LOGS)
+                .unlockedBy("has_fogo_log", has(NexusTags.Items.FOGO_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.METAL_PLANKS.get(), 4)
-                .requires(NexusBlocks.METAL_LOG)
-                .unlockedBy("has_metal_log", has(NexusBlocks.METAL_LOG.get()))
+                .requires(NexusTags.Items.METAL_LOGS)
+                .unlockedBy("has_metal_log", has(NexusTags.Items.METAL_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.NATUREZA_PLANKS.get(), 4)
-                .requires(NexusBlocks.NATUREZA_LOG)
-                .unlockedBy("has_natureza_log", has(NexusBlocks.NATUREZA_LOG.get()))
+                .requires(NexusTags.Items.NATUREZA_LOGS)
+                .unlockedBy("has_natureza_log", has(NexusTags.Items.NATUREZA_LOGS))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusBlocks.ROCHA_PLANKS.get(), 4)
-                .requires(NexusBlocks.ROCHA_LOG)
-                .unlockedBy("has_rocha_log", has(NexusBlocks.ROCHA_LOG.get()))
+                .requires(NexusTags.Items.ROCHA_LOGS)
+                .unlockedBy("has_rocha_log", has(NexusTags.Items.ROCHA_LOGS))
                 .save(recipeOutput);
+        createSaplingRecipe(recipeOutput, NexusBlocks.FOGO_SAPLING.get().asItem(), NexusItems.FRAGMENTO_FOGO.get(), "fogo");
+        createSaplingRecipe(recipeOutput, NexusBlocks.ELETRICO_SAPLING.get().asItem(), NexusItems.FRAGMENTO_ELETRICO.get(), "eletrico");
+        createSaplingRecipe(recipeOutput, NexusBlocks.NATUREZA_SAPLING.get().asItem(), NexusItems.FRAGMENTO_NATUREZA.get(), "natureza");
+        createSaplingRecipe(recipeOutput, NexusBlocks.ROCHA_SAPLING.get().asItem(), NexusItems.FRAGMENTO_ROCHA.get(), "rocha");
+        createSaplingRecipe(recipeOutput, NexusBlocks.AGUA_SAPLING.get().asItem(), NexusItems.FRAGMENTO_AGUA.get(), "agua");
+        createSaplingRecipe(recipeOutput, NexusBlocks.METAL_SAPLING.get().asItem(), NexusItems.FRAGMENTO_METAL.get(), "metal");
+        createSaplingRecipe(recipeOutput, NexusBlocks.LUZ_SAPLING.get().asItem(), NexusItems.FRAGMENTO_LUZ.get(), "luz");
+        createSaplingRecipe(recipeOutput, NexusBlocks.ESCURO_SAPLING.get().asItem(), NexusItems.FRAGMENTO_ESCURO.get(), "escuro");
+
     }
 
     private void createEsmeraldaRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {
@@ -251,5 +270,15 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('E', Items.EMERALD)
                 .unlockedBy("has_" + nome + "_fragmento", has(fragmento))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Nexus.MODID, "esmeralda_" + nome));
+    }
+    private void createSaplingRecipe(RecipeOutput recipeOutput, Item esmeralda, Item fragmento, String nome) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, esmeralda)
+                .pattern(" F ")
+                .pattern("FEF")
+                .pattern(" F ")
+                .define('F', fragmento)
+                .define('E', ItemTags.SAPLINGS)
+                .unlockedBy("has_" + nome + "_fragmento", has(fragmento))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Nexus.MODID,nome+"_sapling"));
     }
 }

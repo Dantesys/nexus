@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:agua_logs"},
+  "result": {
+    "id": "nexus:fragmento_agua",
+    "count": 4
+  }
+}

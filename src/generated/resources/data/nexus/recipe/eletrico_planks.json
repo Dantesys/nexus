@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "nexus:eletrico_log"
+      "tag": "nexus:eletrico_logs"
     }
   ],
   "result": {

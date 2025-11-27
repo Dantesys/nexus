@@ -16,11 +16,20 @@ public class NexusRecipes {
 
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<InfusorRecipe>> INFUSOR_SERIALIZER =
             SERIALIZERS.register("infusor", InfusorRecipe.Serializer::new);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ExtratorRecipe>> EXTRATOR_SERIALIZER =
+            SERIALIZERS.register("extrator", ExtratorRecipe.Serializer::new);
     public static final DeferredHolder<RecipeType<?>, RecipeType<InfusorRecipe>> INFUSOR_TYPE =
             TYPES.register("infusor", () -> new RecipeType<>() {
                 @Override
                 public String toString() {
                     return "infusor";
+                }
+            });
+    public static final DeferredHolder<RecipeType<?>, RecipeType<ExtratorRecipe>> EXTRATOR_TYPE =
+            TYPES.register("extrator", () -> new RecipeType<>() {
+                @Override
+                public String toString() {
+                    return "extrator";
                 }
             });
 

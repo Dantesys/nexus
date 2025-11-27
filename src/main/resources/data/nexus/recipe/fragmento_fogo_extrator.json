@@ -1,0 +1,8 @@
+{
+  "type": "nexus:extrator",
+  "ingredient": {"tag": "nexus:fogo_logs"},
+  "result": {
+    "id": "nexus:fragmento_fogo",
+    "count": 4
+  }
+}
