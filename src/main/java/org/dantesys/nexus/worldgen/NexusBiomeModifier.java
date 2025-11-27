@@ -6,6 +6,7 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.biome.Climate;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
@@ -27,9 +28,8 @@ public class NexusBiomeModifier {
         // CF -> PF -> BM
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
-
         context.register(ADD_TREE_AGUA, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.RIVER), biomes.getOrThrow(Biomes.SWAMP)),
+                HolderSet.direct(biomes.getOrThrow(NexusBiomes.BIOME_AGUA), biomes.getOrThrow(Biomes.SWAMP)),
                 HolderSet.direct(placedFeatures.getOrThrow(NexusPlacedFeatures.AGUA_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
         context.register(ADD_TREE_ELETRICO, new BiomeModifiers.AddFeaturesBiomeModifier(

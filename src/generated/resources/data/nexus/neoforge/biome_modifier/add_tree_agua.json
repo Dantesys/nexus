@@ -1,7 +1,7 @@
 {
   "type": "neoforge:add_features",
   "biomes": [
-    "minecraft:river",
+    "nexus:biome_agua",
     "minecraft:swamp"
   ],
   "features": "nexus:agua_placed",
