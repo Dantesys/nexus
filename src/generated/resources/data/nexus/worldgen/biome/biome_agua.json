@@ -1,17 +1,19 @@
 {
   "carvers": {},
-  "downfall": 0.4,
+  "downfall": 0.9,
   "effects": {
-    "fog_color": 8094436,
-    "foliage_color": 3717616,
-    "grass_color": 64757,
-    "sky_color": 4016088,
-    "water_color": 35839,
-    "water_fog_color": 3710192
+    "fog_color": 8974335,
+    "foliage_color": 3404008,
+    "grass_color": 6750193,
+    "sky_color": 8380415,
+    "water_color": 5237247,
+    "water_fog_color": 3129312
   },
   "features": [
     [],
-    [],
+    [
+      "minecraft:spring_water"
+    ],
     [],
     [],
     [],
@@ -28,19 +30,33 @@
   "spawners": {
     "ambient": [
       {
-        "type": "minecraft:cow",
-        "maxCount": 5,
+        "type": "minecraft:bat",
+        "maxCount": 2,
         "minCount": 1,
-        "weight": 2
+        "weight": 10
       }
     ],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:cow",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 8
+      }
+    ],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],
     "water_ambient": [],
-    "water_creature": []
+    "water_creature": [
+      {
+        "type": "minecraft:squid",
+        "maxCount": 3,
+        "minCount": 1,
+        "weight": 8
+      }
+    ]
   },
   "temperature": 0.5
 }

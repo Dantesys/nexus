@@ -5,18 +5,20 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.ThreeLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
-import net.minecraft.world.level.levelgen.feature.foliageplacers.BushFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
 
@@ -30,9 +32,11 @@ public class NexusConfiguratedFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FOGO_KEY = registerKey("fogo");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LUZ_KEY = registerKey("luz");
     public static final ResourceKey<ConfiguredFeature<?, ?>> METAL_KEY = registerKey("metal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> METAL_PILAR_KEY = registerKey("metal_pilar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> METAL_ORES_KEY = registerKey("metal_ores_pilar");
     public static final ResourceKey<ConfiguredFeature<?, ?>> NATUREZA_KEY = registerKey("natureza");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ROCHA_KEY = registerKey("rocha");
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ROCHA_PILAR_KEY = registerKey("rocha_pilar");
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, AGUA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(NexusBlocks.AGUA_LOG.get()),
@@ -82,6 +86,14 @@ public class NexusConfiguratedFeatures {
                 BlockStateProvider.simple(NexusBlocks.ROCHA_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), 2),
                 new TwoLayersFeatureSize(1, 0, 1)).build());
+        register(context, ROCHA_PILAR_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(Blocks.MOSSY_COBBLESTONE.defaultBlockState()));
+        register(context, METAL_ORES_KEY, Feature.ORE, new OreConfiguration(List.of(
+                OreConfiguration.target(new BlockMatchTest(Blocks.STONE), Blocks.RAW_IRON_BLOCK.defaultBlockState()),
+                OreConfiguration.target(new BlockMatchTest(Blocks.STONE), Blocks.RAW_COPPER_BLOCK.defaultBlockState()),
+                OreConfiguration.target(new BlockMatchTest(Blocks.STONE), Blocks.RAW_GOLD_BLOCK.defaultBlockState())
+        ),
+                17));
+        register(context, METAL_PILAR_KEY, Feature.FOREST_ROCK, new BlockStateConfiguration(Blocks.RAW_IRON_BLOCK.defaultBlockState()));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

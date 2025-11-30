@@ -3,6 +3,7 @@ package org.dantesys.nexus;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -26,7 +27,12 @@ import org.dantesys.nexus.gui.screen.InfusorScreen;
 import org.dantesys.nexus.items.NexusCreativeTab;
 import org.dantesys.nexus.items.NexusItems;
 import org.dantesys.nexus.recipe.NexusRecipes;
+import org.dantesys.nexus.worldgen.NexusRegion;
+import org.dantesys.nexus.worldgen.NexusSurfaceRule;
 import org.slf4j.Logger;
+import terrablender.api.RegionType;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
 import static org.dantesys.nexus.gui.NexusMenus.EXTRATOR_MENU;
 import static org.dantesys.nexus.gui.NexusMenus.INFUSOR_MENU;
@@ -59,6 +65,8 @@ public class Nexus
     {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
+        Regions.register(new NexusRegion(ResourceLocation.fromNamespaceAndPath(MODID,"overworld_1"),1));
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MODID, NexusSurfaceRule.registerAll());
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

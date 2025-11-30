@@ -1,0 +1,63 @@
+{
+  "carvers": {},
+  "downfall": 0.2,
+  "effects": {
+    "fog_color": 12962252,
+    "foliage_color": 12567238,
+    "grass_color": 12567494,
+    "particle": {
+      "options": {
+        "type": "minecraft:scrape"
+      },
+      "probability": 0.004
+    },
+    "sky_color": 12699595,
+    "water_color": 9412776,
+    "water_fog_color": 7306112
+  },
+  "features": [
+    [],
+    [],
+    [
+      "nexus:metal_pilar_placed"
+    ],
+    [],
+    [],
+    [],
+    [
+      "nexus:metal_ores_placed"
+    ],
+    [],
+    [],
+    [
+      "nexus:metal_placed"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [
+      {
+        "type": "minecraft:pig",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "misc": [],
+    "monster": [
+      {
+        "type": "minecraft:pillager",
+        "maxCount": 2,
+        "minCount": 1,
+        "weight": 5
+      }
+    ],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.4
+}

@@ -1,9 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": [
-    "minecraft:sunflower_plains",
-    "minecraft:meadow"
-  ],
-  "features": "nexus:eletrico_placed",
-  "step": "vegetal_decoration"
-}
