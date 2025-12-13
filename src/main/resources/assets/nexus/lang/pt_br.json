@@ -28,6 +28,7 @@
   "item.nexus.aco_boots": "Botas de Aço Elemental",
   "block.nexus.infusor": "Infusor Elemental",
   "block.nexus.extrator": "Extrator Elemental",
+  "block.nexus.bola_cristal": "Bola de Cristal",
   "block.nexus.aco_block": "Bloco de Aço Elemental",
   "block.nexus.agua_leaves": "Folha de Marinha",
   "block.nexus.agua_slab": "Laje de Marinha",
@@ -135,6 +136,9 @@
   "block.nexus.rocha_pressure_plate": "Placa de pressão Granítica",
   "container.nexus.infusor": "Infusor Elemental",
   "container.nexus.extrator": "Extrator Elemental",
+  "container.nexus.bola_cristal": "Bola de Cristal",
+  "enchantment.nexus.disturbio_elemental": "Distúrbio Elemental",
+  "enchantment.nexus.desbloqueio_elemental": "Desbloqueio Elemental",
   "itemGroup.nexus_itens": "Nexus Elemental - Itens",
   "itemGroup.nexus_blocks": "Nexus Elemental - Blocos"
 }

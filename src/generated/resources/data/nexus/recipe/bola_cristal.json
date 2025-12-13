@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "nexus:aco"
+    },
+    "N": {
+      "item": "nexus:nucleo"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "pattern": [
+    "FNF",
+    "FOF",
+    "FOF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nexus:bola_cristal"
+  }
+}

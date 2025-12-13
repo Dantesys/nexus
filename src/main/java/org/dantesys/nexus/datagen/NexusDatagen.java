@@ -27,5 +27,6 @@ public class NexusDatagen {
         generator.addProvider(event.includeClient(), new NexusBlockStateProvider(output,Nexus.MODID,helper));
         generator.addProvider(event.includeClient(), new NexusItemModelProvider(output, helper));
         generator.addProvider(event.includeServer(), new NexusDataPackProvider(output, event.getLookupProvider()));
+        generator.addProvider(event.includeServer(), new NexusGlobalLootTable(output, event.getLookupProvider()));
     }
 }

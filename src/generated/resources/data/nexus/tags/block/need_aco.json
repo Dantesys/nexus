@@ -3,6 +3,7 @@
     "#minecraft:needs_iron_tool",
     "nexus:infusor",
     "nexus:extrator",
-    "nexus:aco_block"
+    "nexus:aco_block",
+    "nexus:bola_cristal"
   ]
 }

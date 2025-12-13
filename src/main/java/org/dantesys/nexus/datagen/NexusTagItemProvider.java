@@ -22,6 +22,7 @@ public class NexusTagItemProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(NexusTags.Items.NUCLEO_ELEMENTAL).add(NexusItems.NUCLEO.get());
         tag(NexusTags.Items.EMERALD_ELEMENTAL)
                 .add(NexusItems.ESMERALDA_AGUA.get())
                 .add(NexusItems.ESMERALDA_ELETRICO.get())

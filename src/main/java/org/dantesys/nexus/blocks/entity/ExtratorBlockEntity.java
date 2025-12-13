@@ -23,8 +23,6 @@ import org.dantesys.nexus.gui.menu.ExtratorMenu;
 import org.dantesys.nexus.recipe.*;
 
 import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import static org.dantesys.nexus.blocks.NexusBlocks.EXTRATOR_BE;

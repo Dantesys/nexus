@@ -1,0 +1,9 @@
+{
+  "entries": [
+    "nexus:desbloqueio_elemental_dungeon",
+    "nexus:desbloqueio_elemental_desert_pyramid",
+    "nexus:desbloqueio_elemental_jungle_temple",
+    "nexus:desbloqueio_elemental_buried_treasure"
+  ],
+  "replace": false
+}

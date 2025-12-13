@@ -68,7 +68,7 @@ public class InfusorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof InfusorBlockEntity infusorBlockEntity) {
-                pPlayer.openMenu(new SimpleMenuProvider(infusorBlockEntity, Component.literal("Infusor Elemental")), pPos);
+                pPlayer.openMenu(new SimpleMenuProvider(infusorBlockEntity, Component.translatable("container.nexus.infusor")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

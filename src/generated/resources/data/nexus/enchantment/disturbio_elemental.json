@@ -1,0 +1,21 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.nexus.disturbio_elemental"
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 6
+  },
+  "max_level": 10,
+  "min_cost": {
+    "base": 12,
+    "per_level_above_first": 4
+  },
+  "primary_items": "#nexus:nucleo_elemental",
+  "slots": [
+    "any"
+  ],
+  "supported_items": "#nexus:nucleo_elemental",
+  "weight": 5
+}

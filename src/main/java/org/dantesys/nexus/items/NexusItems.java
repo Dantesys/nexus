@@ -45,8 +45,8 @@ public class NexusItems {
             new Item.Properties());
     public static final Supplier<Item> ESMERALDA_ESCURO = ITEMS.registerSimpleItem("esmeralda_escuro",
             new Item.Properties());
-    public static final Supplier<Item> NUCLEO = ITEMS.registerSimpleItem("nucleo",
-            new Item.Properties());
+    public static final Supplier<Item> NUCLEO = ITEMS.register("nucleo",
+            () -> new NucleoItem(new Item.Properties()));
     public static final Supplier<Item> ACO = ITEMS.registerSimpleItem("aco",
             new Item.Properties());
     public static final Supplier<SwordItem> ACO_SWORD = ITEMS.register("aco_sword",

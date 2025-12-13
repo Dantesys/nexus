@@ -4,13 +4,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.BiomeGenerationSettings;
-import net.minecraft.world.level.biome.BiomeSpecialEffects;
-import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.dantesys.nexus.Nexus;
+import org.dantesys.nexus.enchantment.NexusEnchants;
 import org.dantesys.nexus.worldgen.NexusBiomeModifier;
 import org.dantesys.nexus.worldgen.NexusBiomes;
 import org.dantesys.nexus.worldgen.NexusConfiguratedFeatures;
@@ -24,7 +21,8 @@ public class NexusDataPackProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.CONFIGURED_FEATURE, NexusConfiguratedFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, NexusPlacedFeatures::bootstrap)
             .add(Registries.BIOME, NexusBiomes::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, NexusBiomeModifier::bootstrap);
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, NexusBiomeModifier::bootstrap)
+            .add(Registries.ENCHANTMENT, NexusEnchants::bootstrap);
 
     public NexusDataPackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(Nexus.MODID));

@@ -16,26 +16,28 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.blocks.entity.ExtratorBlockEntityRenderer;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntityRenderer;
+import org.dantesys.nexus.data.NexusAttachmentType;
 import org.dantesys.nexus.datagen.NexusDatagen;
 import org.dantesys.nexus.gui.NexusMenus;
+import org.dantesys.nexus.gui.screen.BolaCristalScreen;
 import org.dantesys.nexus.gui.screen.ExtratorScreen;
 import org.dantesys.nexus.gui.screen.InfusorScreen;
 import org.dantesys.nexus.items.NexusCreativeTab;
 import org.dantesys.nexus.items.NexusItems;
+import org.dantesys.nexus.loot.NexusLoots;
 import org.dantesys.nexus.recipe.NexusRecipes;
 import org.dantesys.nexus.worldgen.NexusRegion;
 import org.dantesys.nexus.worldgen.NexusSurfaceRule;
 import org.slf4j.Logger;
-import terrablender.api.RegionType;
 import terrablender.api.Regions;
 import terrablender.api.SurfaceRuleManager;
 
-import static org.dantesys.nexus.gui.NexusMenus.EXTRATOR_MENU;
-import static org.dantesys.nexus.gui.NexusMenus.INFUSOR_MENU;
+import static org.dantesys.nexus.gui.NexusMenus.*;
 
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -56,6 +58,8 @@ public class Nexus
         NexusItems.register(modEventBus);
         NexusRecipes.register(modEventBus);
         NexusCreativeTab.register(modEventBus);
+        NexusAttachmentType.register(modEventBus);
+        NexusLoots.register(modEventBus);
         modEventBus.addListener(NexusDatagen::gatherData);
         NeoForge.EVENT_BUS.register(this);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -93,6 +97,7 @@ public class Nexus
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(INFUSOR_MENU.get(), InfusorScreen::new);
             event.register(EXTRATOR_MENU.get(), ExtratorScreen::new);
+            event.register(BOLA_CRISTAL_MENU.get(), BolaCristalScreen::new);
         }
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

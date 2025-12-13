@@ -64,7 +64,7 @@ public class ExtratorBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if(entity instanceof ExtratorBlockEntity infusorBlockEntity) {
-                pPlayer.openMenu(new SimpleMenuProvider(infusorBlockEntity, Component.literal("Extrator Elemental")), pPos);
+                pPlayer.openMenu(new SimpleMenuProvider(infusorBlockEntity, Component.translatable("container.nexus.extrator")), pPos);
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }

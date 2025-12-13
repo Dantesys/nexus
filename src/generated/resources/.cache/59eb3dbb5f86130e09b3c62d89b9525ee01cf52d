@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-30T19:32:43.3967292	Loot Tables
+// 1.21.1	2025-12-07T21:27:18.1574045	Loot Tables
 96d45f5e79cb1e79e6e4a50d47a06e876720c617 data/nexus/loot_table/blocks/aco_block.json
 64192645fe3ffcaf71bea07d39561aa3b22b6f47 data/nexus/loot_table/blocks/agua_button.json
 c885f26bc42cfabf836cef3595325e3266b793d5 data/nexus/loot_table/blocks/agua_door.json
@@ -12,6 +12,7 @@ be97d12f8bd3b6423bf422455f738155ed215e58 data/nexus/loot_table/blocks/agua_press
 7b877603e82d4122d0687b2fa130ef05633c6dc1 data/nexus/loot_table/blocks/agua_slab.json
 489c500589481b3446ee7556ad507eef5534738c data/nexus/loot_table/blocks/agua_stairs.json
 1b28cdfab47470ac475a888582cc160231ccafb8 data/nexus/loot_table/blocks/agua_trapdoor.json
+df73cce6e6b0b6b1747908d86944b653f0375cbb data/nexus/loot_table/blocks/bola_cristal.json
 d9b139a3a78371282b49b35294918f0d8891c06c data/nexus/loot_table/blocks/eletrico_button.json
 6a493d528fc1a8ea2cd4c6da9a5594a881c64868 data/nexus/loot_table/blocks/eletrico_door.json
 f0d2a50cb4996c322964c2d6347662a0738dabea data/nexus/loot_table/blocks/eletrico_fence.json

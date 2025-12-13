@@ -8,7 +8,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.Tags;
 import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.items.NexusItems;
@@ -48,6 +47,13 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('N', NexusItems.NUCLEO.get())
                 .unlockedBy("has_nucleo", has(NexusItems.NUCLEO.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"extrator"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.BOLA_CRISTAL.get())
+                .pattern("FNF").pattern("FOF").pattern("FOF")
+                .define('F',NexusItems.ACO.get())
+                .define('O',Items.OBSIDIAN)
+                .define('N', NexusItems.NUCLEO.get())
+                .unlockedBy("has_nucleo", has(NexusItems.NUCLEO.get()))
+                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"bola_cristal"));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.ACO_BLOCK.get())
                 .pattern("EEE").pattern("EEE").pattern("EEE")
                 .define('E', NexusItems.ACO.get())

@@ -55,7 +55,7 @@ public class NexusPlacedFeatures {
                                       ResourceKey<PlacedFeature> key,
                                       Holder<ConfiguredFeature<?, ?>> configuration){
         List<PlacementModifier> modifiers = List.of(
-                CountPlacement.of(3),
+                CountPlacement.of(1),
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                 SurfaceWaterDepthFilter.forMaxDepth(0),
@@ -68,7 +68,7 @@ public class NexusPlacedFeatures {
                                       ResourceKey<PlacedFeature> key,
                                       Holder<ConfiguredFeature<?, ?>> configuration){
         List<PlacementModifier> modifiers = List.of(
-                CountPlacement.of(10),
+                CountPlacement.of(20),
                 InSquarePlacement.spread(),
                 PlacementUtils.FULL_RANGE,
                 SurfaceWaterDepthFilter.forMaxDepth(0),

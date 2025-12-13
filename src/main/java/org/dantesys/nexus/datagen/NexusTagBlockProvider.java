@@ -21,12 +21,14 @@ public class NexusTagBlockProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup. Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(NexusBlocks.INFUSOR.get())
-                .add(NexusBlocks.EXTRATOR.get());
+                .add(NexusBlocks.EXTRATOR.get())
+                .add(NexusBlocks.BOLA_CRISTAL.get());
         tag(NexusTags.Blocks.NEED_ACO)
                 .addTag(BlockTags.NEEDS_IRON_TOOL)
                 .add(NexusBlocks.INFUSOR.get())
                 .add(NexusBlocks.EXTRATOR.get())
-                .add(NexusBlocks.ACO_BLOCK.get());
+                .add(NexusBlocks.ACO_BLOCK.get())
+                .add(NexusBlocks.BOLA_CRISTAL.get());
         tag(NexusTags.Blocks.INCORRECT_ACO).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).remove(NexusTags.Blocks.NEED_ACO);
 
         tag(BlockTags.FENCES)

@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.dantesys.nexus.blocks.entity.BolaCristalBlockEntity;
 import org.dantesys.nexus.blocks.entity.ExtratorBlockEntity;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
 import org.dantesys.nexus.worldgen.tree.NexusTreeGrowers;
@@ -27,6 +28,8 @@ public class NexusBlocks {
             () -> new InfusorBlock(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().noOcclusion()));
     public static final DeferredBlock<ExtratorBlock> EXTRATOR = registerBlock("extrator",
             () -> new ExtratorBlock(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final DeferredBlock<BolaCristal> BOLA_CRISTAL = registerBlock("bola_cristal",
+            () -> new BolaCristal(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().dynamicShape().noOcclusion()));
     public static final DeferredBlock<Block> ACO_BLOCK = registerBlock("aco_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
     //Madeiras
@@ -254,6 +257,10 @@ public class NexusBlocks {
     public static final Supplier<BlockEntityType<ExtratorBlockEntity>> EXTRATOR_BE =
             BLOCK_ENTITIES.register("extrator",
                     () -> BlockEntityType.Builder.of(ExtratorBlockEntity::new,EXTRATOR.get())
+                            .build(null));
+    public static final Supplier<BlockEntityType<BolaCristalBlockEntity>> BOLA_CRISTAL_BE =
+            BLOCK_ENTITIES.register("bola_cristal",
+                    () -> BlockEntityType.Builder.of(BolaCristalBlockEntity::new,BOLA_CRISTAL.get())
                             .build(null));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
