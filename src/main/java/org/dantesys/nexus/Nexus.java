@@ -16,7 +16,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.blocks.entity.ExtratorBlockEntityRenderer;
@@ -26,6 +25,7 @@ import org.dantesys.nexus.datagen.NexusDatagen;
 import org.dantesys.nexus.gui.NexusMenus;
 import org.dantesys.nexus.gui.screen.BolaCristalScreen;
 import org.dantesys.nexus.gui.screen.ExtratorScreen;
+import org.dantesys.nexus.gui.screen.ForjaScreen;
 import org.dantesys.nexus.gui.screen.InfusorScreen;
 import org.dantesys.nexus.items.NexusCreativeTab;
 import org.dantesys.nexus.items.NexusItems;
@@ -98,6 +98,7 @@ public class Nexus
             event.register(INFUSOR_MENU.get(), InfusorScreen::new);
             event.register(EXTRATOR_MENU.get(), ExtratorScreen::new);
             event.register(BOLA_CRISTAL_MENU.get(), BolaCristalScreen::new);
+            event.register(FORJA_MENU.get(), ForjaScreen::new);
         }
         @SubscribeEvent
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {

@@ -59,6 +59,14 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('E', NexusItems.ACO.get())
                 .unlockedBy("has_aco", has(NexusItems.ACO.get()))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.FORJA.get())
+                .pattern("OOO").pattern("FEN").pattern("OOO")
+                .define('E', NexusBlocks.ACO_BLOCK.get())
+                .define('O', Items.OBSIDIAN)
+                .define('F', Items.BLAST_FURNACE)
+                .define('N', NexusItems.NUCLEO.get())
+                .unlockedBy("has_aco_block", has(NexusBlocks.ACO_BLOCK.get()))
+                .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusItems.ACO.get(), 9)
                 .requires(NexusBlocks.ACO_BLOCK)
                 .unlockedBy("has_aco_block", has(NexusBlocks.ACO_BLOCK)).save(recipeOutput);

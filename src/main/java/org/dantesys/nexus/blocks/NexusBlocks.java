@@ -11,6 +11,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.dantesys.nexus.blocks.entity.BolaCristalBlockEntity;
 import org.dantesys.nexus.blocks.entity.ExtratorBlockEntity;
+import org.dantesys.nexus.blocks.entity.ForjaBlockEntity;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntity;
 import org.dantesys.nexus.worldgen.tree.NexusTreeGrowers;
 import org.dantesys.nexus.items.NexusItems;
@@ -32,6 +33,8 @@ public class NexusBlocks {
             () -> new BolaCristal(BlockBehaviour.Properties.of().explosionResistance(1000f).requiresCorrectToolForDrops().dynamicShape().noOcclusion()));
     public static final DeferredBlock<Block> ACO_BLOCK = registerBlock("aco_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> FORJA = registerBlock("forja",
+            () -> new ForjaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
     //Madeiras
     //Agua
     public static final DeferredBlock<LeavesBlock> AGUA_LEAVES = registerBlock("agua_leaves",
@@ -261,6 +264,10 @@ public class NexusBlocks {
     public static final Supplier<BlockEntityType<BolaCristalBlockEntity>> BOLA_CRISTAL_BE =
             BLOCK_ENTITIES.register("bola_cristal",
                     () -> BlockEntityType.Builder.of(BolaCristalBlockEntity::new,BOLA_CRISTAL.get())
+                            .build(null));
+    public static final Supplier<BlockEntityType<ForjaBlockEntity>> FORJA_BE =
+            BLOCK_ENTITIES.register("forja",
+                    () -> BlockEntityType.Builder.of(ForjaBlockEntity::new,FORJA.get())
                             .build(null));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

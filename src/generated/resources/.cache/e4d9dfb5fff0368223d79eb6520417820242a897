@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-12T22:28:07.7471113	Tags for minecraft:item mod id nexus
+// 1.21.1	2025-12-17T21:24:33.0837068	Tags for minecraft:item mod id nexus
 cb3ecee667983ffc14f80be739dea5b40154c628 data/minecraft/tags/item/axes.json
 58fa6c1ed6d85f68d9cdb5b05a6d9074da7dd91f data/minecraft/tags/item/hoes.json
 98a61c21cebe1e01922ddf9d939e41b94e15800d data/minecraft/tags/item/logs_that_burn.json
@@ -9,6 +9,7 @@ ec6e0baaf0a69fe0eb2645a6df0cb0b99c6fd145 data/minecraft/tags/item/shovels.json
 364c9a3af0055f648ad87d0beb176dfd1c80fee5 data/minecraft/tags/item/swords.json
 589ad6480d79d0a93f19cc8a0dc74405f17faa69 data/minecraft/tags/item/trimmable_armor.json
 e3ef6f3d6b56369fad8a7379d3e2ece831b97c20 data/nexus/tags/item/agua_logs.json
+ed4a9d9daefcef9577034c5c5581c0655c313e29 data/nexus/tags/item/catalizadores.json
 c2a5d498cee2887591e9bad68a67a9c86045f459 data/nexus/tags/item/eletrico_logs.json
 c78dd723ca9b344383103fe5a003d826683a535e data/nexus/tags/item/escuro_logs.json
 bf6d3b7c43c5472774fac5b5f000a9d5ff87b0ab data/nexus/tags/item/esmeralda_elemental.json

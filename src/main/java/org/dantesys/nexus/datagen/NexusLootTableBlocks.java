@@ -31,6 +31,7 @@ public class NexusLootTableBlocks extends BlockLootSubProvider {
         dropSelf(NexusBlocks.INFUSOR.get());
         dropSelf(NexusBlocks.EXTRATOR.get());
         dropSelf(NexusBlocks.BOLA_CRISTAL.get());
+        dropSelf(NexusBlocks.FORJA.get());
         dropSelf(NexusBlocks.ACO_BLOCK.get());
         //Agua
         dropSelf(NexusBlocks.AGUA_STAIRS.get());

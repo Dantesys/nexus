@@ -113,7 +113,7 @@ public class BolaCristal extends BaseEntityBlock {
         if (roll < 90) return 5;
         if (roll < 95) return 6;
         if (roll < 99) return 7;
-        return Elementos.values().length; // 2% começa com todos
+        return Elementos.values().length;
     }
     private static void desbloquearAleatorios(MagicStats stats, int quantidade, RandomSource r) {
         List<Elementos> lista = new ArrayList<>(Arrays.asList(Elementos.values()));

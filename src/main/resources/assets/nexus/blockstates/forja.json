@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "nexus:block/forja" },
+    "facing=south": { "model": "nexus:block/forja", "y": 180 },
+    "facing=west":  { "model": "nexus:block/forja", "y": 270 },
+    "facing=east":  { "model": "nexus:block/forja", "y": 90 }
+  }
+}

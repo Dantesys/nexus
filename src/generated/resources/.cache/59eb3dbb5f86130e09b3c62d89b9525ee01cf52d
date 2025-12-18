@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-07T21:27:18.1574045	Loot Tables
+// 1.21.1	2025-12-15T22:19:43.4374207	Loot Tables
 96d45f5e79cb1e79e6e4a50d47a06e876720c617 data/nexus/loot_table/blocks/aco_block.json
 64192645fe3ffcaf71bea07d39561aa3b22b6f47 data/nexus/loot_table/blocks/agua_button.json
 c885f26bc42cfabf836cef3595325e3266b793d5 data/nexus/loot_table/blocks/agua_door.json
@@ -50,6 +50,7 @@ a6dd4a63507a4739e4a9be7afc5a869b14f4e47f data/nexus/loot_table/blocks/fogo_log.j
 e9a1488ce934dfab19c93e073a4582ad1569dd52 data/nexus/loot_table/blocks/fogo_slab.json
 a430bab41a9371385f8a9542e16aa28fedf72207 data/nexus/loot_table/blocks/fogo_stairs.json
 be69721a27c4b1583a9dd080e9833d562f3a048c data/nexus/loot_table/blocks/fogo_trapdoor.json
+ab4184bbbb817149ac4ba40a8b9d7cd983d8e668 data/nexus/loot_table/blocks/forja.json
 ced4da52c38d40032582d204bb95946fbce9ddc3 data/nexus/loot_table/blocks/infusor.json
 a344ac4026f3e784ad0ce8cab7aa6cd59cf30600 data/nexus/loot_table/blocks/luz_button.json
 56fb10be9136bc5fdc23edf17dd30080e6484d1d data/nexus/loot_table/blocks/luz_door.json

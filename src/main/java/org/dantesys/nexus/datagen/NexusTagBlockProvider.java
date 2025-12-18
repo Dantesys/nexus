@@ -28,7 +28,8 @@ public class NexusTagBlockProvider extends BlockTagsProvider {
                 .add(NexusBlocks.INFUSOR.get())
                 .add(NexusBlocks.EXTRATOR.get())
                 .add(NexusBlocks.ACO_BLOCK.get())
-                .add(NexusBlocks.BOLA_CRISTAL.get());
+                .add(NexusBlocks.BOLA_CRISTAL.get())
+                .add(NexusBlocks.FORJA.get());
         tag(NexusTags.Blocks.INCORRECT_ACO).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL).remove(NexusTags.Blocks.NEED_ACO);
 
         tag(BlockTags.FENCES)
