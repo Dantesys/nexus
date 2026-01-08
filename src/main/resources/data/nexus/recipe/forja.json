@@ -1,0 +1,13 @@
+{
+  "type": "nexus:infusor",
+  "ingredients": [
+    {"item": "nexus:nucleo"},
+    {"item": "nexus:tijolo_forja"},
+    {"item": "nexus:nucleo"},
+    {"item": "nexus:tijolo_forja"}
+  ],
+  "result": {
+    "id": "nexus:forja",
+    "count": 1
+  }
+}

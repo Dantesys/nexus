@@ -55,6 +55,13 @@ public class ElementalStatics implements INBTSerializable<CompoundTag> {
         return es;
     }
 
+    public boolean canUse(int mana){
+        return this.mana>=mana;
+    }
+    public void use(int valor){
+        setMana(mana-valor);
+    }
+
     public void copyFrom(ElementalStatics other) {
         this.unlocked = other.unlocked;
         this.mana = other.mana;

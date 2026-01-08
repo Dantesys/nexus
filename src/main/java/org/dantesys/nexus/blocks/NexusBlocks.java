@@ -35,6 +35,8 @@ public class NexusBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> FORJA = registerBlock("forja",
             () -> new ForjaBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> TIJOLO_FORJA = registerBlock("tijolo_forja",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OBSIDIAN).requiresCorrectToolForDrops()));
     //Madeiras
     //Agua
     public static final DeferredBlock<LeavesBlock> AGUA_LEAVES = registerBlock("agua_leaves",

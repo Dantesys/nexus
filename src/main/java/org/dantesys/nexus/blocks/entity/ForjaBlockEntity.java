@@ -7,22 +7,33 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import org.dantesys.nexus.blocks.ForjaBlock;
 import org.dantesys.nexus.blocks.NexusBlocks;
+import org.dantesys.nexus.catalizadores.CatalisadoresRegistry;
+import org.dantesys.nexus.data.NexusDataComponent;
 import org.dantesys.nexus.gui.menu.ForjaMenu;
+import org.dantesys.nexus.items.ModeloForja;
 import org.dantesys.nexus.items.NexusItems;
-import org.dantesys.nexus.util.NexusTags;
+import org.dantesys.nexus.util.*;
 import org.jetbrains.annotations.Nullable;
 
 public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
@@ -177,6 +188,12 @@ public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
 
     public <T extends BlockEntity> void tick(Level level, BlockPos blockPos, BlockState blockState) {
         if (level.isClientSide) return;
+        boolean formadoAgora = isMultiblockFormado();
+        setFormado(formadoAgora);
+        if (!formadoAgora) {
+            resetProgress();
+            return;
+        }
         tryConsumeLava();
         if(hasDerretido()){
             increaseDerretimentoProgress();
@@ -187,7 +204,7 @@ public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
                 level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
             }
         }
-        /*if(hasRecipe()) {
+        if(hasRecipe()) {
             increaseCraftingProgress();
             setChanged(level, blockPos, blockState);
             if(hasCraftingFinished()) {
@@ -198,8 +215,33 @@ public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
         } else {
             resetProgress();
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
-        }*/
+        }
     }
+    private boolean isMultiblockFormado() {
+        if (level == null) return false;
+        BlockPos center = worldPosition.relative(getBlockState().getValue(HorizontalDirectionalBlock.FACING).getOpposite());
+        for (int x = -1; x <= 1; x++) {
+            for (int y = -1; y <= 1; y++) {
+                for (int z = -1; z <= 1; z++) {
+                    BlockPos pos = center.offset(x, y, z);
+                    // centro precisa ser ar
+                    if (x == 0 && y == 0 && z == 0) {
+                        if (!level.isEmptyBlock(pos)) return false;
+                        continue;
+                    }
+                    // controlador (forja) pode existir em um dos lados
+                    BlockState state = level.getBlockState(pos);
+                    if (state.is(NexusBlocks.FORJA.get())) continue;
+                    // paredes precisam ser tijolo de forja
+                    if (!state.is(NexusBlocks.TIJOLO_FORJA.get())) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
     private void resetDerreter() {
         derretimento = 0;
     }
@@ -230,7 +272,12 @@ public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
         progress = 0;
     }
     private boolean hasCraftingFinished() {
-        return this.progress >= this.getMaxProgress() && lava >= LAVA_COST_CRAFT;
+        ItemStack stack = inventory.getStackInSlot(SLOT_MOLDE);
+        if(stack.getItem() instanceof ModeloForja molde){
+            int custo = molde.getAco_cost();
+            return this.progress >= this.getMaxProgress() && lava >= LAVA_COST_CRAFT && acoderretido >= custo;
+        }
+        return false;
     }
     private void increaseCraftingProgress() {
         progress++;
@@ -239,10 +286,81 @@ public class ForjaBlockEntity extends BlockEntity implements MenuProvider {
             level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
         }
     }
+    private void setFormado(boolean value) {
+        if (level == null) return;
+        BlockState state = getBlockState();
+        boolean formado = state.getValue(ForjaBlock.FORMADO);
+        if (formado == value) return;
+        level.setBlock(
+                worldPosition,
+                getBlockState().setValue(ForjaBlock.FORMADO, value),
+                Block.UPDATE_ALL
+        );
+        setChanged();
+    }
+
+
     private boolean hasRecipe() {
-        return lava <= MAX_LAVA && lava>0;
+        ItemStack stack = inventory.getStackInSlot(SLOT_MOLDE);
+        if(stack.getItem() instanceof ModeloForja molde){
+            int custo = molde.getAco_cost();
+            int catalizadores = molde.getMaxCatalador();
+            return acoderretido >= custo && lava-LAVA_COST_CRAFT >= 0 && checkCata(catalizadores) && !inventory.getStackInSlot(SLOT_ESMERALDA).isEmpty() && inventory.getStackInSlot(SLOT_RESULTADO).isEmpty();
+        }
+        return false;
     }
     private void craftItem() {
-        lava-=LAVA_COST_CRAFT;
+        ItemStack stack = inventory.getStackInSlot(SLOT_MOLDE);
+        if(stack.getItem() instanceof ModeloForja molde){
+            int custo = molde.getAco_cost();
+            int catalizadores = molde.getMaxCatalador();
+            acoderretido -= custo;
+            lava-=LAVA_COST_CRAFT;
+            TagKey<Item> resultado = molde.getResult();
+            Elementos elemento = getElemento();
+            Item item = TagElemento.getTagElemento(resultado,elemento);
+            if(item==null)return;
+            ItemStack resultadoStack = new ItemStack(item);
+            resultadoStack.set(
+                    NexusDataComponent.ELEMENTO.get(),
+                    elemento
+            );
+            for (int i = SLOT_CATALYST_1; i <= SLOT_CATALYST_3 && i < catalizadores; i++) {
+                ItemStack cata = inventory.getStackInSlot(i);
+                if (!cata.isEmpty()) {
+                    ICatalisador catalisador = CatalisadoresRegistry.get(cata);
+                    if (catalisador != null) {
+                        catalisador.aplicar(
+                                resultadoStack,
+                                new ForjaContext(level, elemento, i, null)
+                        );
+                    }
+                    inventory.extractItem(i, 1, false);
+                }
+            }
+            inventory.extractItem(SLOT_ESMERALDA, 1, false);
+            inventory.setStackInSlot(SLOT_RESULTADO, resultadoStack);
+        }
+    }
+    private boolean checkCata(int catalizadores){
+        return switch (catalizadores){
+            case 0 -> true;
+            case 1 -> !inventory.getStackInSlot(SLOT_CATALYST_1).isEmpty();
+            case 2 -> !inventory.getStackInSlot(SLOT_CATALYST_1).isEmpty() && !inventory.getStackInSlot(SLOT_CATALYST_2).isEmpty();
+            case 3 -> !inventory.getStackInSlot(SLOT_CATALYST_1).isEmpty() && !inventory.getStackInSlot(SLOT_CATALYST_2).isEmpty() && !inventory.getStackInSlot(SLOT_CATALYST_3).isEmpty();
+            default -> false;
+        };
+    }
+    public Elementos getElemento() {
+        ItemStack stack = inventory.getStackInSlot(SLOT_ESMERALDA);
+        if (stack.is(NexusItems.ESMERALDA_AGUA.get())) return Elementos.AGUA;
+        if (stack.is(NexusItems.ESMERALDA_ELETRICO.get())) return Elementos.ELETRICO;
+        if (stack.is(NexusItems.ESMERALDA_ESCURO.get())) return Elementos.SOMBRA;
+        if (stack.is(NexusItems.ESMERALDA_FOGO.get())) return Elementos.FOGO;
+        if (stack.is(NexusItems.ESMERALDA_LUZ.get())) return Elementos.LUZ;
+        if (stack.is(NexusItems.ESMERALDA_METAL.get())) return Elementos.METAL;
+        if (stack.is(NexusItems.ESMERALDA_NATUREZA.get())) return Elementos.NATUREZA;
+        if (stack.is(NexusItems.ESMERALDA_ROCHA.get())) return Elementos.ROCHA;
+        return null;
     }
 }

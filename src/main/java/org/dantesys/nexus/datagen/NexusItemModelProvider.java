@@ -102,6 +102,9 @@ public class NexusItemModelProvider extends ItemModelProvider {
         fenceItem(NexusBlocks.NATUREZA_FENCE, NexusBlocks.NATUREZA_PLANKS);
         buttonItem(NexusBlocks.ROCHA_BUTTON, NexusBlocks.ROCHA_PLANKS);
         fenceItem(NexusBlocks.ROCHA_FENCE, NexusBlocks.ROCHA_PLANKS);
+        getBuilder(BuiltInRegistries.ITEM.getKey(NexusItems.MOLDE_ESPADA.get()).getPath())
+                .parent(new ModelFile.UncheckedModelFile(Nexus.MODID+":item/forja_comum"))
+                .texture("0", Nexus.MODID+":item/molde_base");
     }
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))

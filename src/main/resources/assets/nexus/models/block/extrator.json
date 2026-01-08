@@ -5,6 +5,7 @@
 		"0": "nexus:block/extrator",
 		"particle": "nexus:block/extrator"
 	},
+	"render_type": "cutout",
 	"elements": [
 		{
 			"from": [11, 8, 7],

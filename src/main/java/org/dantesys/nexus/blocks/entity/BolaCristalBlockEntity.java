@@ -110,8 +110,8 @@ public class BolaCristalBlockEntity extends BlockEntity implements MenuProvider 
             return;
         }
 
-        int id = getElemento();
-        if (id == -1) {
+        Elementos elemento = getElemento();
+        if (elemento == null) {
             mana = regen = afinidade = sinergia = 0;
             return;
         }
@@ -121,7 +121,6 @@ public class BolaCristalBlockEntity extends BlockEntity implements MenuProvider 
         // 🔥 SOMENTE AGORA sincroniza
         PacketSender.syncMagicStats((ServerPlayer) player, cap);
 
-        var elemento = Elementos.getId(id);
         var stat = cap.get(elemento);
 
         if (stat != null && stat.isUnlocked()) {
@@ -134,16 +133,19 @@ public class BolaCristalBlockEntity extends BlockEntity implements MenuProvider 
         }
     }
 
-    public int getElemento(){
+    public Elementos getElemento() {
         ItemStack stack = inventory.getStackInSlot(0);
-        return stack.is(NexusItems.ESMERALDA_AGUA.get()) ? 0 :
-                stack.is(NexusItems.ESMERALDA_ELETRICO.get()) ? 1 :
-                        stack.is(NexusItems.ESMERALDA_ESCURO.get()) ? 2 :
-                                stack.is(NexusItems.ESMERALDA_FOGO.get()) ? 3 :
-                                        stack.is(NexusItems.ESMERALDA_LUZ.get()) ? 4 :
-                                                stack.is(NexusItems.ESMERALDA_METAL.get()) ? 5 :
-                                                        stack.is(NexusItems.ESMERALDA_NATUREZA.get()) ? 6 :
-                                                                stack.is(NexusItems.ESMERALDA_ROCHA.get()) ? 7 : -1;
+
+        if (stack.is(NexusItems.ESMERALDA_AGUA.get())) return Elementos.AGUA;
+        if (stack.is(NexusItems.ESMERALDA_ELETRICO.get())) return Elementos.ELETRICO;
+        if (stack.is(NexusItems.ESMERALDA_ESCURO.get())) return Elementos.SOMBRA;
+        if (stack.is(NexusItems.ESMERALDA_FOGO.get())) return Elementos.FOGO;
+        if (stack.is(NexusItems.ESMERALDA_LUZ.get())) return Elementos.LUZ;
+        if (stack.is(NexusItems.ESMERALDA_METAL.get())) return Elementos.METAL;
+        if (stack.is(NexusItems.ESMERALDA_NATUREZA.get())) return Elementos.NATUREZA;
+        if (stack.is(NexusItems.ESMERALDA_ROCHA.get())) return Elementos.ROCHA;
+
+        return null;
     }
 
     public void tick(Level level, BlockPos pos, BlockState state) {
@@ -174,11 +176,11 @@ public class BolaCristalBlockEntity extends BlockEntity implements MenuProvider 
         ItemStack nucleo = inventory.getStackInSlot(1);
         if (nucleo.isEmpty()) return;
 
-        int id = getElemento();
-        if (id == -1) return;
+        Elementos elemento = getElemento();
+        if (elemento == null) return;
 
         MagicStats cap = player.getData(NexusAttachmentType.MAGIC_STATS);
-        var stat = cap.get(Elementos.getId(id));
+        var stat = cap.get(elemento);
         if (stat == null) return;
 
         boolean aplicou = false;

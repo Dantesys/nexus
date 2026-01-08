@@ -147,4 +147,14 @@ public class ForjaMenu extends AbstractContainerMenu {
         int arrowPixelSize = 33;
         return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
     }
+    public boolean isForjando(){
+        return this.blockEntity.getProgress()>0;
+    }
+
+    public int getForjando() {
+        int progress = this.blockEntity.getProgress();
+        int maxProgress = this.blockEntity.getMaxProgress();
+        int arrowPixelSize = 30;
+        return maxProgress != 0 && progress != 0 ? progress * arrowPixelSize / maxProgress : 0;
+    }
 }

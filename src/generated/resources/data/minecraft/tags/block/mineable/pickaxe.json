@@ -2,6 +2,8 @@
   "values": [
     "nexus:infusor",
     "nexus:extrator",
-    "nexus:bola_cristal"
+    "nexus:bola_cristal",
+    "nexus:forja",
+    "nexus:tijolo_forja"
   ]
 }

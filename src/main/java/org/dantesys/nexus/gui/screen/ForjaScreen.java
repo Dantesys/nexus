@@ -13,6 +13,7 @@ public class ForjaScreen extends AbstractContainerScreen<ForjaMenu> {
     private static final ResourceLocation LAVA = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/lava.png");
     private static final ResourceLocation ACO = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/aco.png");
     private static final ResourceLocation DERRETER = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/derreter.png");
+    private static final ResourceLocation FORJANDO = ResourceLocation.fromNamespaceAndPath("nexus", "textures/gui/forjando.png");
     private final int guiWidth = 176;
     private final int guiHeight = 166;
     public ForjaScreen(ForjaMenu menu, Inventory inv, Component title) {
@@ -41,6 +42,10 @@ public class ForjaScreen extends AbstractContainerScreen<ForjaMenu> {
         guiGraphics.blit(ACO,x + 29, y + 69-menu.getAcoBar(), 0, 0, 10,menu.getAcoBar(), 10, 33);
         if(menu.isDerretendo()){
             guiGraphics.blit(DERRETER,x + 26, y + 16, 0, 0, 16,menu.getDerreteBar(), 16, 16);
+
+        }
+        if(menu.isForjando()){
+            guiGraphics.blit(FORJANDO,x + 118, y + 40, 0, 0, menu.getForjando(),8, 30, 8);
 
         }
     }

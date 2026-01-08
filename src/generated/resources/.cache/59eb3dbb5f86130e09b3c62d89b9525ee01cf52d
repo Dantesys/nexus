@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-15T22:19:43.4374207	Loot Tables
+// 1.21.1	2026-01-07T22:41:07.1134335	Loot Tables
 96d45f5e79cb1e79e6e4a50d47a06e876720c617 data/nexus/loot_table/blocks/aco_block.json
 64192645fe3ffcaf71bea07d39561aa3b22b6f47 data/nexus/loot_table/blocks/agua_button.json
 c885f26bc42cfabf836cef3595325e3266b793d5 data/nexus/loot_table/blocks/agua_door.json
@@ -108,3 +108,4 @@ b1ea3b99fc9db31c04b090166b5ee0804ce84429 data/nexus/loot_table/blocks/rocha_trap
 719a4a31ee34e60738ff9725c4c9040ae450a137 data/nexus/loot_table/blocks/stripped_metal_log.json
 2641dcd2cae7e4fbf9a5f0ba7ce68217366c4165 data/nexus/loot_table/blocks/stripped_natureza_log.json
 61f9613876c68895609a0db7a50c2679f878e70b data/nexus/loot_table/blocks/stripped_rocha_log.json
+692fc3aa84ffc1a9be0eb5281f2049fd21edb38b data/nexus/loot_table/blocks/tijolo_forja.json

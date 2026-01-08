@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-30T19:32:43.4221105	Block States: nexus
+// 1.21.1	2026-01-07T22:41:07.138527	Block States: nexus
 1ea623831e6cf62330ba0f4b95dc80c7c105f80e assets/nexus/blockstates/aco_block.json
 a7373037d933bb6bdd647897bb51e9729f3e893e assets/nexus/blockstates/agua_button.json
 85d097da0314100d563ffaf1ccc971dd87391820 assets/nexus/blockstates/agua_door.json
@@ -104,6 +104,7 @@ d548457a2f994c301c9451454abe14036937d4d4 assets/nexus/blockstates/rocha_stairs.j
 02216aef654a187e5ace11d4ddd8c63ffe0ce628 assets/nexus/blockstates/stripped_metal_log.json
 ce7da4c94784c82de4a0bc85d3f737725a8da0d5 assets/nexus/blockstates/stripped_natureza_log.json
 f8093511b7a997714a93acbaafde2f717b4df9de assets/nexus/blockstates/stripped_rocha_log.json
+df886ca689a75708d17b860daf31a5d651c79d5b assets/nexus/blockstates/tijolo_forja.json
 a7c163c1363f276a295c2f01fe58cc969fa6f270 assets/nexus/models/block/aco_block.json
 2465cc33d65a12b65dfdaed18796278c27e4909e assets/nexus/models/block/agua_button.json
 2a4b10954fe4c24e04ea501b4d33baad5161dab0 assets/nexus/models/block/agua_button_pressed.json
@@ -369,6 +370,7 @@ cfb740b3f6d135c5c12faa5e5467e1f9fca9459e assets/nexus/models/block/stripped_natu
 f51004a1a992046d54155800cb30a01ecc8560d4 assets/nexus/models/block/stripped_natureza_log_horizontal.json
 ba87a40cba9420b8fe3a85d7251c54444d7459ed assets/nexus/models/block/stripped_rocha_log.json
 6e6c15ef5c691ea3d85cfded994fb082b2341f7a assets/nexus/models/block/stripped_rocha_log_horizontal.json
+ffe83880136922ab468081956dcbdf73ef64a4d0 assets/nexus/models/block/tijolo_forja.json
 3b21166fe4dccc54265e6c1fa7c21e3df6a506d3 assets/nexus/models/item/aco_block.json
 f4feab146af9b8a1843dbeeec3ce432fc74c0846 assets/nexus/models/item/agua_fence_gate.json
 ba6a3c1b3243e6036c119590fd7767645e7f476f assets/nexus/models/item/agua_leaves.json
@@ -442,3 +444,4 @@ f09484dff5efe49a714a1ff9360f5dd364ed89e0 assets/nexus/models/item/stripped_eletr
 fb4ae05006476cc3455a0778ad28a39c90d943c5 assets/nexus/models/item/stripped_metal_log.json
 86ce5a04b38d117d7d064eefec1a2ed43de70871 assets/nexus/models/item/stripped_natureza_log.json
 9b4206eb966766e519a9c143af32d6a2e221158e assets/nexus/models/item/stripped_rocha_log.json
+6b40e8e6f10805ce586b20e6a010202a1466be7c assets/nexus/models/item/tijolo_forja.json

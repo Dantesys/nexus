@@ -4,6 +4,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.dantesys.nexus.data.NexusAttachmentType;
 import org.dantesys.nexus.magic.ElementalStatics;
@@ -15,6 +16,14 @@ import static org.dantesys.nexus.Nexus.MODID;
 
 @EventBusSubscriber(modid = MODID)
 public class NexusEvents {
+    @SubscribeEvent
+    public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
+        if(event.getEntity() instanceof ServerPlayer sp) {
+            MagicStats stats = sp.getData(NexusAttachmentType.MAGIC_STATS);
+            PacketSender.syncMagicStats(sp, stats);
+        }
+    }
+
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Post event) {
         Player player = event.getEntity();
@@ -31,7 +40,7 @@ public class NexusEvents {
             if (stat == null || !stat.isUnlocked()) continue;
             int mana = stat.getMana();
             int max = stat.getMaxMana();
-            int regen = stat.getRegeneracao()/20;
+            int regen = stat.getRegeneracao()/10;
             if (mana >= max || regen <= 0) continue;
             int novaMana = Math.min(max, mana + regen);
             if (novaMana != mana) {

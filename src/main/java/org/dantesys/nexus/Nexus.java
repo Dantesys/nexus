@@ -19,8 +19,10 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.blocks.entity.ExtratorBlockEntityRenderer;
+import org.dantesys.nexus.blocks.entity.ForjaBlockEntityRenderer;
 import org.dantesys.nexus.blocks.entity.InfusorBlockEntityRenderer;
 import org.dantesys.nexus.data.NexusAttachmentType;
+import org.dantesys.nexus.data.NexusDataComponent;
 import org.dantesys.nexus.datagen.NexusDatagen;
 import org.dantesys.nexus.gui.NexusMenus;
 import org.dantesys.nexus.gui.screen.BolaCristalScreen;
@@ -55,6 +57,7 @@ public class Nexus
         modEventBus.addListener(this::commonSetup);
         NexusMenus.register(modEventBus);
         NexusBlocks.register(modEventBus);
+        NexusDataComponent.register(modEventBus);
         NexusItems.register(modEventBus);
         NexusRecipes.register(modEventBus);
         NexusCreativeTab.register(modEventBus);
@@ -104,6 +107,7 @@ public class Nexus
         public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
             event.registerBlockEntityRenderer(NexusBlocks.INFUSOR_BE.get(), InfusorBlockEntityRenderer::new);
             event.registerBlockEntityRenderer(NexusBlocks.EXTRATOR_BE.get(), ExtratorBlockEntityRenderer::new);
+            event.registerBlockEntityRenderer(NexusBlocks.FORJA_BE.get(), ForjaBlockEntityRenderer::new);
         }
     }
 }

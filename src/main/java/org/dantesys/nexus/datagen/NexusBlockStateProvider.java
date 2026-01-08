@@ -4,7 +4,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SaplingBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -21,6 +20,7 @@ public class NexusBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(NexusBlocks.ACO_BLOCK);
+        blockWithItem(NexusBlocks.TIJOLO_FORJA);
         //Agua
         blockWithItem(NexusBlocks.AGUA_PLANKS);
         stairsBlock(NexusBlocks.AGUA_STAIRS.get(), blockTexture(NexusBlocks.AGUA_PLANKS.get()));

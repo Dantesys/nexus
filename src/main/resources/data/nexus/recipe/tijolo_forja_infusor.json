@@ -1,0 +1,13 @@
+{
+  "type": "nexus:infusor",
+  "ingredients": [
+    {"item": "minecraft:obsidian"},
+    {"item": "nexus:aco"},
+    {"item": "minecraft:obsidian"},
+    {"item": "nexus:aco"}
+  ],
+  "result": {
+    "id": "nexus:tijolo_forja",
+    "count": 2
+  }
+}

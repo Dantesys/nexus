@@ -1,8 +1,15 @@
 {
   "variants": {
-    "facing=north": { "model": "nexus:block/forja" },
-    "facing=south": { "model": "nexus:block/forja", "y": 180 },
-    "facing=west":  { "model": "nexus:block/forja", "y": 270 },
-    "facing=east":  { "model": "nexus:block/forja", "y": 90 }
+    "facing=north,formado=false": { "model": "nexus:block/forja" },
+    "facing=north,formado=true":  { "model": "nexus:block/forja_ativa" },
+
+    "facing=south,formado=false": { "model": "nexus:block/forja", "y": 180 },
+    "facing=south,formado=true":  { "model": "nexus:block/forja_ativa", "y": 180 },
+
+    "facing=west,formado=false":  { "model": "nexus:block/forja", "y": 270 },
+    "facing=west,formado=true":   { "model": "nexus:block/forja_ativa", "y": 270 },
+
+    "facing=east,formado=false":  { "model": "nexus:block/forja", "y": 90 },
+    "facing=east,formado=true":   { "model": "nexus:block/forja_ativa", "y": 90 }
   }
 }

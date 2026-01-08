@@ -47,25 +47,10 @@ public class NexusRecipeProvider extends RecipeProvider {
                 .define('N', NexusItems.NUCLEO.get())
                 .unlockedBy("has_nucleo", has(NexusItems.NUCLEO.get()))
                 .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"extrator"));
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.BOLA_CRISTAL.get())
-                .pattern("FNF").pattern("FOF").pattern("FOF")
-                .define('F',NexusItems.ACO.get())
-                .define('O',Items.OBSIDIAN)
-                .define('N', NexusItems.NUCLEO.get())
-                .unlockedBy("has_nucleo", has(NexusItems.NUCLEO.get()))
-                .save(recipeOutput,ResourceLocation.fromNamespaceAndPath(Nexus.MODID,"bola_cristal"));
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.ACO_BLOCK.get())
                 .pattern("EEE").pattern("EEE").pattern("EEE")
                 .define('E', NexusItems.ACO.get())
                 .unlockedBy("has_aco", has(NexusItems.ACO.get()))
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, NexusBlocks.FORJA.get())
-                .pattern("OOO").pattern("FEN").pattern("OOO")
-                .define('E', NexusBlocks.ACO_BLOCK.get())
-                .define('O', Items.OBSIDIAN)
-                .define('F', Items.BLAST_FURNACE)
-                .define('N', NexusItems.NUCLEO.get())
-                .unlockedBy("has_aco_block", has(NexusBlocks.ACO_BLOCK.get()))
                 .save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, NexusItems.ACO.get(), 9)
                 .requires(NexusBlocks.ACO_BLOCK)

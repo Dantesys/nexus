@@ -1,0 +1,6 @@
+{
+  "parent": "nexus:item/forja_comum",
+  "textures": {
+    "0": "nexus:item/molde_base"
+  }
+}

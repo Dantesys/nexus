@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-17T21:24:33.0837068	Tags for minecraft:item mod id nexus
+// 1.21.1	2026-01-07T22:41:07.1204432	Tags for minecraft:item mod id nexus
 cb3ecee667983ffc14f80be739dea5b40154c628 data/minecraft/tags/item/axes.json
 58fa6c1ed6d85f68d9cdb5b05a6d9074da7dd91f data/minecraft/tags/item/hoes.json
 98a61c21cebe1e01922ddf9d939e41b94e15800d data/minecraft/tags/item/logs_that_burn.json
@@ -13,9 +13,11 @@ ed4a9d9daefcef9577034c5c5581c0655c313e29 data/nexus/tags/item/catalizadores.json
 c2a5d498cee2887591e9bad68a67a9c86045f459 data/nexus/tags/item/eletrico_logs.json
 c78dd723ca9b344383103fe5a003d826683a535e data/nexus/tags/item/escuro_logs.json
 bf6d3b7c43c5472774fac5b5f000a9d5ff87b0ab data/nexus/tags/item/esmeralda_elemental.json
+bc285c419441a119cbf1fa2dbaebc994cd7351da data/nexus/tags/item/espada_elemental.json
 228e4680b08421d160f5cc42421e3add9d42e67f data/nexus/tags/item/fogo_logs.json
 c26dcbac35447bf7c5730de30c0667a8319ff394 data/nexus/tags/item/luz_logs.json
 0dcc47a76d2f6ae747a5d823bebfb0d88945471e data/nexus/tags/item/metal_logs.json
+c80cd883b2c620d2d675f2f01b3ddc039db8b4de data/nexus/tags/item/moldes.json
 69ffcceae9821aef28b79b165ceca1eb56f5f870 data/nexus/tags/item/natureza_logs.json
 619740396c14468fb12964211ba69266ccdf892b data/nexus/tags/item/nucleo_elemental.json
 db8cdab3a33f534d8eeb9458ca6ddbe5b23a3f01 data/nexus/tags/item/rocha_logs.json

@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-17T21:24:33.0868313	Recipes
+// 1.21.1	2026-01-07T22:41:07.1234487	Recipes
 f78d94b5cb81898d8d7e04eec3a7cb043e5dbda7 data/nexus/advancement/recipes/building_blocks/agua_slab.json
 7928e143844c204232564605e8bbef6b16ae924b data/nexus/advancement/recipes/building_blocks/agua_stairs.json
 b2e3a4e043d5ee5086ed64784c7b1ed89e48caee data/nexus/advancement/recipes/building_blocks/eletrico_slab.json
@@ -36,7 +36,6 @@ aaed96215d1dd2fc2aa2b4f0625b4b4facf6e55a data/nexus/advancement/recipes/misc/aco
 bf012a7a84e7a822488e928082ee3283af2bf7cc data/nexus/advancement/recipes/misc/aco_sword.json
 81158e104294e2ace612be93024d5b34809f8769 data/nexus/advancement/recipes/misc/agua_planks.json
 4257f69d54c5b51a5980eff352c6a244f35e9313 data/nexus/advancement/recipes/misc/agua_sapling.json
-087c7d27fdc2a457b1c6accbc0de24488d424fd2 data/nexus/advancement/recipes/misc/bola_cristal.json
 f6ea22077466ea60fb3fbf9b23b8c97383b1406a data/nexus/advancement/recipes/misc/eletrico_planks.json
 0e59c611abfa4809324dd2b43eafa30d5367d9e1 data/nexus/advancement/recipes/misc/eletrico_sapling.json
 622cab56e8b7885f6ea86b0772a20486c01ed6d2 data/nexus/advancement/recipes/misc/escuro_planks.json
@@ -52,7 +51,6 @@ a26bcd80daec6db2616958cabc468958fe7c728b data/nexus/advancement/recipes/misc/esm
 80454f412a404bcfe563d64dc40ae42915540baf data/nexus/advancement/recipes/misc/extrator.json
 1dc353ef2c899c7463e73a888a811a990e4c15bc data/nexus/advancement/recipes/misc/fogo_planks.json
 807dbe173ac8c26b3e9cb5ba2a0fc76ff659e763 data/nexus/advancement/recipes/misc/fogo_sapling.json
-dd5da87c5f80f785823cbd67d6882cda0304ac91 data/nexus/advancement/recipes/misc/forja.json
 b3284ee4807b07c31d3c6704313f48057bd4fc6c data/nexus/advancement/recipes/misc/infusor.json
 3cd37f4f97c6398091f40464840c55be3e3bbdfe data/nexus/advancement/recipes/misc/luz_planks.json
 e34bfe84b2bf690276fb3e540e6b5c9771bb9c4c data/nexus/advancement/recipes/misc/luz_sapling.json
@@ -123,7 +121,6 @@ b21db98ee768266ad0477cbbc90846915321cf48 data/nexus/recipe/agua_pressure_plate.j
 47cd4535c237914b7f20ea7a8fe9f5424663fd1b data/nexus/recipe/agua_slab.json
 54e2c14a2901f5e992ed1c36e09799d9c8530053 data/nexus/recipe/agua_stairs.json
 129c9b7192aee1e90f9c309329e1bdde4fc9fc82 data/nexus/recipe/agua_trapdoor.json
-77ef280995b620ebb929867ef0522b52f41a06c6 data/nexus/recipe/bola_cristal.json
 9679630391081b621b2d8fb0ae91c72fae01ff8e data/nexus/recipe/eletrico_button.json
 d9b55068e4df23bf1f3fd7b8359c2aae0cbb5af6 data/nexus/recipe/eletrico_door.json
 af47ded7badc32e7991335e886e9a01cd3822fb5 data/nexus/recipe/eletrico_fence.json
@@ -163,7 +160,6 @@ f52575b68183ad8a765b42ed0c6e30298d922544 data/nexus/recipe/fogo_sapling.json
 b18a8c1d869177c210c915542cef77b465fb14a7 data/nexus/recipe/fogo_slab.json
 4cedf1561e0a403b650980752db20d518e0bcca9 data/nexus/recipe/fogo_stairs.json
 8d15590e97bfde5295321e2e2444dd8bb5d20a73 data/nexus/recipe/fogo_trapdoor.json
-0b36356434d56ffa3733ed7ef5aff3c04458f971 data/nexus/recipe/forja.json
 f99b37485c2313e6d4709d173a0974625d64bee4 data/nexus/recipe/infusor.json
 fdaa9e90cf0d9012683d4fcb93a15c8207aab1dc data/nexus/recipe/luz_button.json
 505ef1de61b9733328354ed7e3993d64d2fe5b5a data/nexus/recipe/luz_door.json

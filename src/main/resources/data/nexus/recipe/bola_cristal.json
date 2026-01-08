@@ -1,0 +1,13 @@
+{
+  "type": "nexus:infusor",
+  "ingredients": [
+    {"item": "nexus:nucleo"},
+    {"item": "nexus:aco"},
+    {"item": "minecraft:obsidian"},
+    {"item": "nexus:aco"}
+  ],
+  "result": {
+    "id": "nexus:bola_cristal",
+    "count": 1
+  }
+}

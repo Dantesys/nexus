@@ -29,6 +29,7 @@ public class NexusTags {
         public static final TagKey<Item> NUCLEO_ELEMENTAL = createTag("nucleo_elemental");
         public static final TagKey<Item> CATALIZADORES = createTag("catalizadores");
         public static final TagKey<Item> MOLDES = createTag("moldes");
+        public static final TagKey<Item> ESPADA_ELEMENTAL = createTag("espada_elemental");
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Nexus.MODID, name));
         }

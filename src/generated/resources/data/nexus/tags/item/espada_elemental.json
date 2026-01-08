@@ -1,0 +1,12 @@
+{
+  "values": [
+    "nexus:espada_agua",
+    "nexus:espada_luz",
+    "nexus:espada_fogo",
+    "nexus:espada_eletrico",
+    "nexus:espada_escuro",
+    "nexus:espada_metal",
+    "nexus:espada_rocha",
+    "nexus:espada_natureza"
+  ]
+}

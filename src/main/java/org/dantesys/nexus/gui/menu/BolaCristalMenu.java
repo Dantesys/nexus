@@ -122,20 +122,23 @@ public class BolaCristalMenu extends AbstractContainerMenu {
         String status = getString(data.get(0));
         return Component.literal(status);
     }
-    public int getTextColor(){
-        int elemento = blockEntity.getElemento();
-        return switch (elemento){
-            case 0 -> 0x0000ff;
-            case 1 -> 0xffff00;
-            case 2 -> 0x363636;
-            case 3 -> 0xff0000;
-            case 4 -> 0xffffff;
-            case 5 -> 0x909090;
-            case 6 -> 0x00ff00;
-            case 7 -> 0xa58c79;
-            default -> 0x8000ff;
+    public int getTextColor() {
+        var elemento = blockEntity.getElemento();
+
+        if (elemento == null) return 0x8000ff;
+
+        return switch (elemento) {
+            case AGUA -> 0x0000FF;
+            case ELETRICO -> 0xFFFF00;
+            case SOMBRA -> 0x363636;
+            case FOGO -> 0xFF0000;
+            case LUZ -> 0xFFFFFF;
+            case METAL -> 0x909090;
+            case NATUREZA -> 0x00FF00;
+            case ROCHA -> 0xA58C79;
         };
     }
+
 
     private static @NotNull String getString(int elementalStatics) {
         String status;
@@ -171,18 +174,21 @@ public class BolaCristalMenu extends AbstractContainerMenu {
         String status = getString(data.get(3));
         return Component.literal(status);
     }
-    public String getBgStats(){
-        int elemento = blockEntity.getElemento();
-        return switch (elemento){
-            case 0 -> "textures/gui/status/agua.png";
-            case 1 -> "textures/gui/status/eletrico.png";
-            case 2 -> "textures/gui/status/escuro.png";
-            case 3 -> "textures/gui/status/fogo.png";
-            case 4 -> "textures/gui/status/luz.png";
-            case 5 -> "textures/gui/status/metal.png";
-            case 6 -> "textures/gui/status/natureza.png";
-            case 7 -> "textures/gui/status/rocha.png";
-            default -> "textures/gui/status/nada.png";
+    public String getBgStats() {
+        var elemento = blockEntity.getElemento();
+
+        if (elemento == null)
+            return "textures/gui/status/nada.png";
+
+        return switch (elemento) {
+            case AGUA -> "textures/gui/status/agua.png";
+            case ELETRICO -> "textures/gui/status/eletrico.png";
+            case SOMBRA -> "textures/gui/status/escuro.png";
+            case FOGO -> "textures/gui/status/fogo.png";
+            case LUZ -> "textures/gui/status/luz.png";
+            case METAL -> "textures/gui/status/metal.png";
+            case NATUREZA -> "textures/gui/status/natureza.png";
+            case ROCHA -> "textures/gui/status/rocha.png";
         };
     }
 }

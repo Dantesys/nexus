@@ -10,6 +10,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.dantesys.nexus.Nexus;
 import org.dantesys.nexus.blocks.NexusBlocks;
 import org.dantesys.nexus.items.NexusItems;
+import org.dantesys.nexus.items.NexusToolTier;
 import org.dantesys.nexus.util.NexusTags;
 
 import javax.annotation.Nullable;
@@ -23,6 +24,16 @@ public class NexusTagItemProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(NexusTags.Items.MOLDES).add(NexusItems.MOLDE_ESPADA.get());
+        tag(NexusTags.Items.ESPADA_ELEMENTAL)
+                .add(NexusItems.AGUA_SWORD.get())
+                .add(NexusItems.LUZ_SWORD.get())
+                .add(NexusItems.FOGO_SWORD.get())
+                .add(NexusItems.ELETRICO_SWORD.get())
+                .add(NexusItems.ESCURO_SWORD.get())
+                .add(NexusItems.METAL_SWORD.get())
+                .add(NexusItems.ROCHA_SWORD.get())
+                .add(NexusItems.NATUREZA_SWORD.get());
         tag(NexusTags.Items.CATALIZADORES)
                 .add(Items.COAL)
                 .addTag(NexusTags.Items.NUCLEO_ELEMENTAL)
